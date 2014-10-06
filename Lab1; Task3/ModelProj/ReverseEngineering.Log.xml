@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2014-10-07T00:56:55" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '4fce2bfc-a8ee-4c42-83d7-37b31d7e4e67' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'cbb32612-0060-4caa-8c87-a6e9ad072e6a' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelProj::RailTransport' -  (Package)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelProj::RailTransport::Car' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelProj::RailTransport::Passenger' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelProj::RailTransport::PassengerCar' -  (Class)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelProj::RailTransport::PassengerCar::_passengers' -  (Property)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelProj::RailTransport::PassengerCar::AddPassenger' -  (Operation)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelProj::RailTransport::PassengerCar::AddPassenger::pass' -  (Parameter)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelProj::RailTransport::PassengerCar::CountBaggage' -  (Property)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelProj::RailTransport::PassengerCar::CountFreeSeats' -  (Property)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelProj::RailTransport::PassengerCar::CountPassengers' -  (Property)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelProj::RailTransport::PassengerCar::CountSeats' -  (Property)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelProj::RailTransport::PassengerCar::CountTakenSeats' -  (Property)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelProj::RailTransport::PassengerCar::PassengerCar' -  (Operation)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelProj::RailTransport::PassengerCar::PassengerCar::number' -  (Parameter)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelProj::RailTransport::PassengerCar::PassengerCar::type' -  (Parameter)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelProj::RailTransport::PassengerCar::Type' -  (Property)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelProj::RailTransport::TypeCar' -  (Enumeration)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelProj::System' -  (Package)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelProj::System::Collections' -  (Package)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelProj::System::Collections::Generic' -  (Package)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelProj::System::Collections::Generic::List' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelProj::System::Collections::Generic::List&lt;Passenger‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelProj::System::IComparable' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelProj::System::IComparable&lt;PassengerCar‎&gt;' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelProj::RailTransport::PassengerCar to ModelProj::RailTransport::TypeCar (Association)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelProj::RailTransport::PassengerCar to ModelProj::System::IComparable&lt;PassengerCar‎&gt; (InterfaceRealization)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelProj::RailTransport::PassengerCar to ModelProj::RailTransport::Car (Generalization)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelProj::RailTransport::Car to ModelProj::System::IComparable&lt;Car‎&gt; (InterfaceRealization)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelProj::RailTransport::Car to ModelProj::System::IComparable&lt;PassengerCar‎&gt; (InterfaceRealization)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelProj::RailTransport::Car to ModelProj::System::IComparable (InterfaceRealization)" />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="High" Text="(1) type(s) fully reverse engineered." />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="High" Text="(7) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2014-10-07T00:56:57" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>
