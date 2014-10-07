@@ -13,45 +13,88 @@ namespace RailTransport
 
 	public class PassengerTrain : Train<PassengerCar>
 	{
-		public override int Length
-		{
+        public override int Length
+        {
             get { return this._cars.Count; }
-		}
+        }
 
-		private List<PassengerCar> _cars=null;
+        private List<PassengerCar> _cars = null;
 
-		public override void AddCar(PassengerCar car)
-		{
+        public override void AddCar(PassengerCar car)
+        {
             this._cars.Add(car);
-		}
+        }
 
-		public virtual IEnumerable<PassengerCar> Find(int minPass, int maxPass)
-		{
+        public virtual IEnumerable<PassengerCar> Find(int minPass, int maxPass)
+        {
             return
-            this._cars.Where(x => 
+            this._cars.Where(x =>
             { return minPass <= x.CountTakenSeats && x.CountTakenSeats <= maxPass; });
-		}
+        }
 
-		public override void RemoveCar(PassengerCar car)
-		{
+        public override void RemoveCar(PassengerCar car)
+        {
             this._cars.Remove(car);
-		}
+        }
 
-		public PassengerTrain()
-		{
+        public PassengerTrain(int number)
+        {
+            Number = number;
             this._cars = new List<PassengerCar>();
-		}
+        }
 
-		public override void Sort()
-		{
+        public override void Sort()
+        {
             this._cars.Sort();
-		}
+        }
 
-		public override void RemoveAllCars()
-		{
+        public override void RemoveAllCars()
+        {
             this._cars.Clear();
+        }
+		
+		public virtual int CountPassAndBaggage()
+		{
+            return this._cars.Sum(x => x.CountBaggage + x.CountPassengers);
 		}
 
-	}
+
+        public override void AddCars(PassengerCar[] cars)
+        {
+            for (int i = 0; i < cars.Length; i++)
+            {
+                this.AddCar(cars[i]);
+            }
+        }
+
+        public virtual void AddPassenger(Passenger pass)
+        {
+            if (pass.Ticket.NumberTrain == Number)
+            {
+                this._cars.First(x => x.Number == pass.Ticket.NumberCar).AddPassenger(pass);
+            }
+        }
+
+        public virtual void AddPassengers(Passenger[] pass)
+        {
+            for (int i = 0; i < pass.Length; i++)
+            {
+                this.AddPassenger(pass[i]);
+            }
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb=new StringBuilder();
+            sb.AppendFormat("Train №{0}", this.Number);
+            this._cars.ForEach(x=>
+                {
+                    sb.Append("\n");
+                    sb.Append(x.ToString());
+                }
+                );
+            return sb.ToString();
+        }
+    }
 }
 

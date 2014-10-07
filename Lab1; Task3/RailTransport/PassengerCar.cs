@@ -49,6 +49,7 @@ namespace RailTransport
 
         public PassengerCar(int number, TypeCar type)
         {
+            this._passengers = new List<Passenger>();
             Number = number;
             Type = type;
             switch (type)
@@ -67,7 +68,6 @@ namespace RailTransport
 
         public virtual void AddPassenger(Passenger pass)
         {
-            if (pass.Ticket.NumberTrain == Number)
                 this._passengers.Add(pass);
         }
 
@@ -84,6 +84,12 @@ namespace RailTransport
         public int CompareTo(PassengerCar other)
         {
             return Type.CompareTo(other.Type);
+        }
+
+        public override string ToString()
+        {
+            return string.Format("Car №{0}\n Type: {1}\n CountFreeSeats: {2}\n CountSeats: {3}",
+                Number, Type, CountFreeSeats, CountSeats);
         }
     }
 }

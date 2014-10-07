@@ -13,15 +13,17 @@ namespace RailTransport
 
 	public abstract class Train<T>
 	{
-		public virtual int Length
+        public virtual int Number { get; protected set; }
+		public abstract int Length
 		{
 			get;
-			private set;
 		}
 
 		public abstract void Sort();
 
 		public abstract void AddCar(T car);
+
+        public abstract void AddCars(T[] cars);
 
 		public abstract void RemoveCar(T car);
 

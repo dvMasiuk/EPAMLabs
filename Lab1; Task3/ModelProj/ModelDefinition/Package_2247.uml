@@ -21,7 +21,7 @@
         <referencesInternal>
           <reference
             Id="23cbdb24-80c5-4c6d-b225-18a2accbd32d"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DCar"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DCar"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -178,13 +178,14 @@
       <class
         Id="8fb42499-fed8-4aa2-b12a-2f8a76dd5a9f"
         name="PassengerCar"
+        visibility="Private"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <referencesInternal>
           <reference
             Id="47b7464a-baf9-4967-8f8c-1245ef50ee28"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerCar"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DPassengerCar ArrayRank%3D1 ParentType%3DPassengerCar)"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -323,7 +324,7 @@
             name="CountBaggage"
             isLeaf="false"
             isStatic="false"
-            isReadOnly="false"
+            isReadOnly="true"
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
@@ -331,7 +332,7 @@
             <referencesInternal>
               <reference
                 Id="2bea977b-1205-4e5a-8e39-3f9b8f51d2bf"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3DCountBaggage"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3DCountBaggage"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -386,7 +387,7 @@
                     <propertyInstance
                       Id="8ba63d44-0893-4f5e-8462-dd44e3f7bf40"
                       name="Set"
-                      value="public" />
+                      value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                 </propertyInstances>
               </stereotypeInstance>
@@ -411,7 +412,7 @@
             <referencesInternal>
               <reference
                 Id="4007b022-cc65-4fca-a5c0-2aa92f18302d"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3DCountFreeSeats"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3DCountFreeSeats"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -492,7 +493,7 @@
             <referencesInternal>
               <reference
                 Id="6598633a-f0ac-47d2-845c-f060178f31eb"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3DCountPassengers"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3DCountPassengers"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -572,7 +573,7 @@
             <referencesInternal>
               <reference
                 Id="c039d0a4-df23-409f-b49d-9d2ea4334fef"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3DCountSeats"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3DCountSeats"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -652,7 +653,7 @@
             <referencesInternal>
               <reference
                 Id="a759a155-1515-438b-9ec9-5b701f7fb3b0"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3DCountTakenSeats"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3DCountTakenSeats"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -732,7 +733,7 @@
             <referencesInternal>
               <reference
                 Id="83211de3-0023-4ef1-9e42-fc9a3d319e4c"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3DType"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3DType"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -814,7 +815,7 @@
             <referencesInternal>
               <reference
                 Id="900b638d-bcb9-4c91-a01c-61d6229e433d"
-                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3D_passengers"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3D_passengers"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -880,7 +881,7 @@
             <referencesInternal>
               <reference
                 Id="c55b3374-20c9-427e-bdcf-7d7a1acb77b6"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DTypeCar)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DTypeCar)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -942,7 +943,7 @@
                   <referencesInternal>
                     <reference
                       Id="b4dd2c9b-3f89-42af-a6ff-d33b71381596"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DTypeCar)]) ParameterIdentifier%3Dnumber"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DTypeCar)]) ParameterIdentifier%3Dnumber"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -961,7 +962,7 @@
                   <referencesInternal>
                     <reference
                       Id="8f87c048-d84a-4852-ac4d-392c3d65e29f"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DTypeCar)]) ParameterIdentifier%3Dtype"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DTypeCar)]) ParameterIdentifier%3Dtype"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -985,7 +986,7 @@
             <referencesInternal>
               <reference
                 Id="d0bd0be0-549a-4eb1-b1a1-3416323d464a"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3D(Name%3DAddPassenger OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassenger)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3D(Name%3DAddPassenger OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassenger)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -1061,7 +1062,7 @@
                   <referencesInternal>
                     <reference
                       Id="f0037504-3650-4f5a-8f96-c80b9481bc72"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3D(Name%3DAddPassenger OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassenger)]) ParameterIdentifier%3Dpass"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3D(Name%3DAddPassenger OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassenger)]) ParameterIdentifier%3Dpass"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -1082,6 +1083,12 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="dbbd35bb-acf4-4889-b91f-82bd11ca8651"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3D(Name%3DRemovePassenger OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassenger)])"
+                tag="ViewCode" />
+            </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
                 Id="753cb7e1-da41-4b43-9d65-86d175c362da"
@@ -1152,6 +1159,12 @@
                   name="pass"
                   direction="In"
                   isUnique="false">
+                  <referencesInternal>
+                    <reference
+                      Id="6e8f667b-f2e0-41d0-9608-d0c32f39fb3c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3D(Name%3DRemovePassenger OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassenger)]) ParameterIdentifier%3Dpass"
+                      tag="ViewCode" />
+                  </referencesInternal>
                   <type_NamedElement>
                     <classMoniker
                       Id="5b127bdf-c1d1-4093-a8ca-4487e34e781f"
@@ -1170,6 +1183,12 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="22bf6bd7-ccbd-43ca-b3b4-bca65a8a9418"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3DRemoveAllPassengers"
+                tag="ViewCode" />
+            </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
                 Id="4a9831b2-ed4e-4734-89cf-7e076afafc59"
@@ -1236,6 +1255,104 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="88cc35ae-32e0-4f21-93a0-ea9aae8045fa"
+            name="CompareTo"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3b51c828-6ffb-4c52-ac58-17fae6ce748a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3D(Name%3DCompareTo OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="62bbcbd8-f6be-490e-9b8f-ab260be93875"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7d88d525-fd57-4707-a0ab-cdd260032597">
+                    <propertyInstance
+                      Id="9679397c-1f58-4b14-bc89-307c161f352b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8d01fafa-7067-4102-948c-6d32c481b316">
+                    <propertyInstance
+                      Id="c4a35677-d0ad-4482-ab72-8d6349fab860"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="802fba78-266a-4c8b-8487-63fa5c8c257f">
+                    <propertyInstance
+                      Id="d4bffcd5-7368-49a2-92b4-79d15188de6f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e675d653-3a7c-42bb-8b2f-5e61e19397fd">
+                    <propertyInstance
+                      Id="ce452d6e-9c0e-45ce-ac17-caab96c9e1c6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dd6bad41-fa95-4b42-b09f-05d61f532b17">
+                    <propertyInstance
+                      Id="cda13161-df36-44c0-afd6-b542455f4f25"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="450000fe-1d6d-4b8f-9301-26ebd420c865">
+                    <propertyInstance
+                      Id="b7bb0ee4-0125-4238-9fda-824e143f2088"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0e9851e6-19c3-461a-9f27-8a163a19aab5"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelProj.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8ace47f8-323f-4fbc-8917-f5c2def53c94"
+                  name="other"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="03492f6b-09a8-4c4a-b691-ef3e3e9874bf"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3D(Name%3DCompareTo OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar)]) ParameterIdentifier%3Dother"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="8fb42499-fed8-4aa2-b12a-2f8a76dd5a9f"
+                      LastKnownName="PassengerCar"
+                      LastKnownLocation="Package_2247.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1248,7 +1365,7 @@
         <referencesInternal>
           <reference
             Id="43f7f1ec-0cbd-441d-9291-024b40c3dd93"
-            handle="viewcode://./CodeSchema_Enum?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DTypeCar"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DTypeCar"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -1347,7 +1464,7 @@
         <referencesInternal>
           <reference
             Id="cba6c9fa-1849-49ec-b3ca-027e34f85f88"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1)"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1)"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -1405,7 +1522,7 @@
                 <referencesInternal>
                   <reference
                     Id="073c22c1-f8e2-495c-bc88-d0b9934a1329"
-                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) ParameterIdentifier%3D0"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) ParameterIdentifier%3D0"
                     tag="ViewCode" />
                 </referencesInternal>
                 <ownedParameterableElement>
@@ -1478,7 +1595,7 @@
             <referencesInternal>
               <reference
                 Id="7089050f-fdbe-4a08-8239-13e7aae706e7"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) Member%3DLength"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) Member%3DLength"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -1545,6 +1662,86 @@
                 LastKnownLocation="ModelProj.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="38f6352b-9c22-44de-9e26-45d028b29ccb"
+            name="Number"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="8fe5305f-62ae-4315-bdc1-0ea61550baf7"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) Member%3DNumber"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="12c461f6-54a8-4020-b0d1-237a27a060df"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3055855-2c32-43a6-89ab-27e700ae25bd">
+                    <propertyInstance
+                      Id="484d1058-9158-41d3-85f0-6c5eb6ae8c91"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9766a488-0818-4cb4-8611-8c7b32256b3f">
+                    <propertyInstance
+                      Id="eed08ac8-8593-4033-b02f-753cfdb0d43f"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="abda0eb4-aea9-408a-a7db-9b344ea15131">
+                    <propertyInstance
+                      Id="41722778-3991-4180-a879-62ea5b430233"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="72e562c4-9f54-4494-83ad-01977eef858e">
+                    <propertyInstance
+                      Id="a4ba36ad-f230-4a84-896a-c0f3abc16507"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f2aa6b3e-7c4a-4dc9-ab21-a69aaf37e6d4">
+                    <propertyInstance
+                      Id="f555f06c-0098-4593-a4f2-17de491b95ac"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="581692f4-2745-40dd-8ebf-e71cc118f7e8">
+                    <propertyInstance
+                      Id="725c501a-0a44-41a0-b682-57797506c81d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6c1b3f0c-a022-4a56-8e63-2467983f6b0d">
+                    <propertyInstance
+                      Id="a744b0f3-86fa-408e-bd5f-85c71ed4fc5c"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelProj.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -1558,7 +1755,7 @@
             <referencesInternal>
               <reference
                 Id="8d85e776-103c-4c38-a18b-1ec8c632aac3"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) Member%3DSort"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) Member%3DSort"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -1613,178 +1810,6 @@
             </appliedStereotypesInternal>
           </operation>
           <operation
-            Id="928eb98c-961c-4f7d-8499-37c0efd1294c"
-            name="AddCar"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="true"
-            concurrency="Sequential"
-            isQuery="false">
-            <referencesInternal>
-              <reference
-                Id="b1513d8c-5f4b-4e74-a5a5-c0df1cac9c1d"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) Member%3D(Name%3DAddCar OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) ParameterIdentifier%3D0)])"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="9fc4ab71-17d2-4f10-9e4c-275dfa1ce1ee"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="f0b9bb9c-6f14-4514-ad7e-a40826fbf5c5">
-                    <propertyInstance
-                      Id="c3f06170-ec7f-4939-b580-a8dc38b71596"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="bbc72253-0c5e-462f-8394-535a1f8188d3">
-                    <propertyInstance
-                      Id="aad84079-4c63-40b9-8aac-30fff5611ae4"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="d98f5a68-b12c-495f-a0af-13f06be8d01f">
-                    <propertyInstance
-                      Id="37a2a149-9968-4a86-af55-a69895cb28b8"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="27da98fd-f7e1-47b2-af53-97014168894f">
-                    <propertyInstance
-                      Id="9fb086ca-9054-4b09-be47-aa1420d54ef5"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="11a4202a-0c0f-43c0-aa4c-27ab34af3f2f">
-                    <propertyInstance
-                      Id="3cf1b5fb-4374-4bde-9a12-8640bc24934a"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="ac8fc794-a620-4a13-a19b-a3ab43563fbd">
-                    <propertyInstance
-                      Id="7f438279-82bc-4431-bdc5-5a71280f8e48"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="140189b9-d2da-405a-8beb-a83e1ff69705"
-                  name="car"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="3b685295-41ed-4a6d-9e47-797c1fde41b3"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) Member%3D(Name%3DAddCar OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) ParameterIdentifier%3D0)]) ParameterIdentifier%3Dcar"
-                      tag="ViewCode" />
-                  </referencesInternal>
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="d1450f0b-5d5c-4e4a-9067-318c89135ebe"
-                      LastKnownName="T"
-                      LastKnownLocation="Package_2247.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="c65a871f-d448-49b4-89f8-646a5d579cef"
-            name="RemoveCar"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="true"
-            concurrency="Sequential"
-            isQuery="false">
-            <referencesInternal>
-              <reference
-                Id="fe793e4d-6355-4feb-acb7-0fc2dfe3cbe0"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) Member%3D(Name%3DRemoveCar OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) ParameterIdentifier%3D0)])"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="f1645cf2-0e0e-45c2-b88c-bf73af5f7a91"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="5891bc9f-b51a-4faa-9915-2c806baa0ad3">
-                    <propertyInstance
-                      Id="9a265272-2d6a-4dbe-9c89-8d0cefff6e8a"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="c55bca45-b524-44f9-9d95-0676f3b7a115">
-                    <propertyInstance
-                      Id="8fe4f91d-e0de-4a6c-bf78-fdc02adc45a3"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="c7112c50-9bbf-4d3d-b00a-19495d372638">
-                    <propertyInstance
-                      Id="9b8631d9-b01a-436b-9f52-2de9efbb35dd"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="f3fb3333-668f-4813-8fd2-bcc1b35902b7">
-                    <propertyInstance
-                      Id="463bd417-2acb-418a-9ea8-3986dc33ee97"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="411de83f-00ae-490b-b571-0b550434defd">
-                    <propertyInstance
-                      Id="b89a3c13-90d3-4121-b9f5-9dc0b0a17e5f"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="a8ff1957-5d29-4f3a-a3fb-e321ad62b5c3">
-                    <propertyInstance
-                      Id="5d686d7e-7547-40c2-af18-f7c83e8231fb"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="18ca8cd1-7331-47b0-b473-34313ceb06dc"
-                  name="car"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="d522ae3f-2055-4e91-a9c5-4bbd4747bcda"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) Member%3D(Name%3DRemoveCar OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) ParameterIdentifier%3D0)]) ParameterIdentifier%3Dcar"
-                      tag="ViewCode" />
-                  </referencesInternal>
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="d1450f0b-5d5c-4e4a-9067-318c89135ebe"
-                      LastKnownName="T"
-                      LastKnownLocation="Package_2247.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="288e31ec-0f37-4c5c-9084-b176f94a56c9"
             name="RemoveAllCars"
             isLeaf="false"
@@ -1795,7 +1820,7 @@
             <referencesInternal>
               <reference
                 Id="cfee003c-2d26-4a35-91e4-cd72a78523ef"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) Member%3DRemoveAllCars"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) Member%3DRemoveAllCars"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -1849,6 +1874,342 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
           </operation>
+          <operation
+            Id="91353614-00dd-46b7-9886-c0ce6034db39"
+            name="AddCar"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="06bdc862-be6f-4883-a627-a0ea11c06fb8"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) Member%3D(Name%3DAddCar OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) ParameterIdentifier%3D0)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="46ecc6bc-1563-426e-854c-c9ea19c84f87"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="619c9e60-3327-4620-bf50-83fa2f62cb9c">
+                    <propertyInstance
+                      Id="72e079fe-7718-4d4b-b098-8bfc8bd55f5e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="019713fb-1909-41aa-af0a-70da23d2a05d">
+                    <propertyInstance
+                      Id="4bba9241-00ac-404a-aac9-b0972b29ee12"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1813901e-eb30-4d42-9ebb-c959f1a45505">
+                    <propertyInstance
+                      Id="f5504820-7eca-499a-a123-a743c5e4aa91"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="84a63d74-d29d-4b50-82c0-846aee5aeb42">
+                    <propertyInstance
+                      Id="22d86f3c-853c-40e5-b3bf-1019763be307"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ed9d6dc2-2b13-4bfb-a29b-020e084171de">
+                    <propertyInstance
+                      Id="dcb05945-ae99-41f0-b98b-63ab13dfd988"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7db88b41-4cbc-4d17-8ab1-dd3ca0cfca33">
+                    <propertyInstance
+                      Id="d22fe3c3-aa41-4e96-ad12-bf4884e44064"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="202dfb8d-ab72-4e2b-8adb-6dd65f75d22b"
+                  name="car"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f8ca97ed-d77a-48d9-9fab-65616a0861ae"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) Member%3D(Name%3DAddCar OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) ParameterIdentifier%3D0)]) ParameterIdentifier%3Dcar"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d1450f0b-5d5c-4e4a-9067-318c89135ebe"
+                      LastKnownName="T"
+                      LastKnownLocation="Package_2247.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="7911fefb-bea4-4450-9e08-c7cb33568193"
+            name="AddCars"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e000f3f4-afa0-4fe4-9cdb-fb41a71b6638"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) Member%3D(Name%3DAddCars OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(ArrayRank%3D1 ParentType%3D(Type%3D(Name%3DTrain GenericParameterCount%3D1) ParameterIdentifier%3D0)))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="cd0aec99-a2fa-4ee1-8bb8-4da3c5c4547b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ff1a98af-d294-4f84-bb57-dd65eba036bc">
+                    <propertyInstance
+                      Id="edda2944-b4f3-427a-9fb3-86fa50669bff"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="898e6bc6-9f8c-4d5a-86bb-fb970dbbeec8">
+                    <propertyInstance
+                      Id="f0a9ac36-ec33-4143-a395-da81df130bcf"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="34dfe7bb-f3c4-4528-a35a-36370990d473">
+                    <propertyInstance
+                      Id="3f78495d-9462-4b4b-9b58-6bd705eda544"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eb0df118-038f-4d26-b550-18ec1500bac3">
+                    <propertyInstance
+                      Id="93c65c85-9d87-44b8-b657-105801a115b6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4cefc537-000f-4514-9ce2-80bed9fcb5ba">
+                    <propertyInstance
+                      Id="7ee22709-6d31-4264-986e-7ace0f607d31"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="157d0d51-ba05-45e1-947e-05979f5f6747">
+                    <propertyInstance
+                      Id="b1c08219-f413-4689-9bed-6cc00a995b54"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ba8c5113-2a31-4de0-8b8b-9b9fde475ae4"
+                  name="cars"
+                  direction="In"
+                  isOrdered="true">
+                  <referencesInternal>
+                    <reference
+                      Id="c13e26e8-2f4d-4c38-8ec6-9e9aaaa402b9"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) Member%3D(Name%3DAddCars OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(ArrayRank%3D1 ParentType%3D(Type%3D(Name%3DTrain GenericParameterCount%3D1) ParameterIdentifier%3D0)))]) ParameterIdentifier%3Dcars"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="58fe293f-3050-4280-b20d-28c4af0772d4"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="7accbb4e-6d95-4d25-8f6b-a6958fe72d27"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="13c1726f-3656-466e-b35e-398fbf49adf8"
+                      LastKnownName="T‎[]"
+                      LastKnownLocation="ModelProj.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="56f6d0a4-10d8-4e74-be3a-00852b8bc54a"
+            name="RemoveCar"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6b0c324d-39b4-4b9b-9ae9-899809b6ab20"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) Member%3D(Name%3DRemoveCar OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) ParameterIdentifier%3D0)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c0a1c658-78a1-47ee-b77a-8a613d5d2564"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c6f73729-8683-4fc7-b374-d3971f95ef6e">
+                    <propertyInstance
+                      Id="ae7ccb60-57d7-472c-8631-7945a55206f7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a64c97b2-2608-4b41-b58c-5479c926c431">
+                    <propertyInstance
+                      Id="6a652a02-7c67-4488-8eee-7b86f6887176"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eda941bf-620b-441e-a3e6-5efd5e29a0bc">
+                    <propertyInstance
+                      Id="af8a015e-76b5-4028-95a7-a3664d037454"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dcaf74b6-4da3-4f1b-9d99-421b21d5f11e">
+                    <propertyInstance
+                      Id="55c0035d-c0c7-484a-be95-5c7ecddd41c7"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6dcd10b3-cd86-4c9c-bbd6-e3a561a06d41">
+                    <propertyInstance
+                      Id="9acd087d-35a8-4150-8b96-6b9f6e3f67a1"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2dcd7c28-4669-42e2-98fb-31001403e3fb">
+                    <propertyInstance
+                      Id="72e1e2f4-323c-43fd-a211-56c4203754fa"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5fd4bb57-2bdb-4c40-8677-5ffb178c03ce"
+                  name="car"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="648058b0-625a-40e8-937f-631ba5a3a5a7"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) Member%3D(Name%3DRemoveCar OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) ParameterIdentifier%3D0)]) ParameterIdentifier%3Dcar"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d1450f0b-5d5c-4e4a-9067-318c89135ebe"
+                      LastKnownName="T"
+                      LastKnownLocation="Package_2247.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f8674e35-c8c1-4dd8-86f7-23b715dec515"
+            name="Train"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ee6c55de-75aa-4e13-8033-4f3f44a5fe35"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b5b1b763-dc31-4138-9891-9a66fb0a294e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e3eaaef9-42ad-4dcb-8001-7a96348828b3">
+                    <propertyInstance
+                      Id="089b1969-8ca0-489e-acf7-56fd1d3a3906"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f9ef273e-e6d3-41d4-8593-b76bdccf50d1">
+                    <propertyInstance
+                      Id="6e591308-debb-471c-b871-a338999bb44a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="16100227-bdd3-4e9f-b564-915a6ddcefbe">
+                    <propertyInstance
+                      Id="0800eea8-58f3-4274-b2b1-7ae2b15f53d9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fbe0231e-d498-4a5d-989e-5b7a795c51fa">
+                    <propertyInstance
+                      Id="5a81a890-3bfd-4897-91be-fea145fcb09b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="14501eb5-076b-47af-be3c-437840d4c4d3">
+                    <propertyInstance
+                      Id="3eeadbbe-787f-411f-97fb-f741b292366b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="199876f9-9a97-4f14-aec9-948d8b96ac0b">
+                    <propertyInstance
+                      Id="790236a3-20fd-49af-a407-4b54f1202272"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1856,13 +2217,14 @@
       <class
         Id="5b127bdf-c1d1-4093-a8ca-4487e34e781f"
         name="Passenger"
+        visibility="Private"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <referencesInternal>
           <reference
             Id="063b397e-df58-4c4d-9b5e-401b0d5cbaae"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassenger"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DPassenger ArrayRank%3D1 ParentType%3DPassenger)"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -1991,7 +2353,7 @@
             <referencesInternal>
               <reference
                 Id="56edd204-f09b-4957-b497-a50df097362c"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassenger Member%3DTicket"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassenger Member%3DTicket"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -2069,6 +2431,12 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="55e13231-f800-4ca5-b85e-43d80066326d"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassenger Member%3DHasBaggage"
+                tag="ViewCode" />
+            </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
                 Id="d10e0066-1bd3-4bc4-9cfe-3a831262f050"
@@ -2086,7 +2454,7 @@
                     <propertyInstance
                       Id="c25d2cc5-e32c-44cf-96f7-ed88b4fa9328"
                       name="Get"
-                      value="none" />
+                      value="public" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
                     Id="64138a14-7935-4284-94a2-d1c4a50ad4eb">
@@ -2121,7 +2489,7 @@
                     <propertyInstance
                       Id="fb5a3294-4457-43b3-9e05-d586c8cc74cb"
                       name="Set"
-                      value="none" />
+                      value="public" />
                   </stereotypeInstanceHasPropertyInstances>
                 </propertyInstances>
               </stereotypeInstance>
@@ -2144,6 +2512,12 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="7a7074ce-78e9-459f-9948-4bfa254ecdd6"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassenger Member%3DName"
+                tag="ViewCode" />
+            </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
                 Id="efc8f8ce-8d29-401e-9c56-389501f4b9ef"
@@ -2161,7 +2535,7 @@
                     <propertyInstance
                       Id="9a25a893-ca48-4e3e-aa6a-1a4e48affae8"
                       name="Get"
-                      value="none" />
+                      value="public" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
                     Id="f0f257c6-b4b4-4573-8159-3adc0615c15a">
@@ -2196,7 +2570,7 @@
                     <propertyInstance
                       Id="928d80fb-2c17-4843-bd84-849d8b2a54ff"
                       name="Set"
-                      value="private" />
+                      value="public" />
                   </stereotypeInstanceHasPropertyInstances>
                 </propertyInstances>
               </stereotypeInstance>
@@ -2221,7 +2595,7 @@
             <referencesInternal>
               <reference
                 Id="06de6097-43c7-45bc-9ec4-98ebfaa35295"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassenger Member%3D.ctor"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassenger Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -2281,6 +2655,12 @@
                   name="name"
                   direction="In"
                   isUnique="false">
+                  <referencesInternal>
+                    <reference
+                      Id="dbdfab2f-6342-4c2a-b49e-f51824c65998"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassenger Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dname"
+                      tag="ViewCode" />
+                  </referencesInternal>
                   <type_NamedElement>
                     <primitiveTypeMoniker
                       Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
@@ -2304,7 +2684,7 @@
         <referencesInternal>
           <reference
             Id="f034441e-9c25-45f6-9153-094ef0c65f85"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DTicket"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DTicket"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -2362,6 +2742,12 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="a0341522-c61f-4989-a771-04d68e9295eb"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DTicket Member%3DNumberTrain"
+                tag="ViewCode" />
+            </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
                 Id="636893a0-d5b6-45d0-b010-5d8cc0547a97"
@@ -2379,7 +2765,7 @@
                     <propertyInstance
                       Id="cefeef22-1bc5-4cf5-b3db-46adb7bcfec4"
                       name="Get"
-                      value="none" />
+                      value="public" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
                     Id="09d6dcc0-03f9-4caf-954c-646ec6d1fa20">
@@ -2414,7 +2800,87 @@
                     <propertyInstance
                       Id="f33fa493-c250-4648-b102-50ab718eb09e"
                       name="Set"
-                      value="private" />
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelProj.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d7f9ba6b-545f-49f0-be78-f7d175a6c4fc"
+            name="NumberCar"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="8bb6f5a2-8dda-4909-b087-6187b74ada21"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DTicket Member%3DNumberCar"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="aacb09cb-f6d6-43ae-b63e-f94c2f5ce5e8"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b79e50c7-778b-4a17-b56f-41bd18bd0ce7">
+                    <propertyInstance
+                      Id="8d78e826-a575-4fb8-a5e3-63d88164ed73"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f3964670-100a-4742-8d40-f12e391641b2">
+                    <propertyInstance
+                      Id="2120191f-77f6-4c0e-b4c5-9cefcaa61379"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="427fa92a-cab0-497e-b5e8-19d2f8617e6d">
+                    <propertyInstance
+                      Id="778cee3f-f5e7-4739-a11c-94bdd991584c"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3bb93980-dafd-45dd-bc86-b8caaffe89be">
+                    <propertyInstance
+                      Id="a25869f7-2379-4b49-8962-f8b4a4c4eb9a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cbcee19d-2ce3-4f0d-9e9d-5d86f3e2de85">
+                    <propertyInstance
+                      Id="5bb36227-1f46-4f88-8d5c-b17ad3454457"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="df86f5c8-e3ca-4e5c-ad92-8d941382fd55">
+                    <propertyInstance
+                      Id="4c7329c1-7f48-4997-a45d-51a4ea65067c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4f4197dc-5590-4c58-99f4-94571752d99a">
+                    <propertyInstance
+                      Id="689added-0ae6-4020-9363-c6703907c49f"
+                      name="Set"
+                      value="public" />
                   </stereotypeInstanceHasPropertyInstances>
                 </propertyInstances>
               </stereotypeInstance>
@@ -2429,57 +2895,63 @@
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="b2d62f3f-a39c-424a-9f60-4f9be85e255c"
+            Id="024ca191-6453-4e77-b4da-dcfcb8c19971"
             name="Ticket"
-            isLeaf="true"
+            isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="86d16d91-16e5-4eae-878e-af57affe7b88"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DTicket Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="2501f700-573e-4e14-8255-2f62c3d52e56"
+                Id="033e5a1c-84dd-4aa4-826e-effef38d6270"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="0dedcf7b-9c4c-4dc0-8b7f-eb8ae0a3d340">
+                    Id="2a7ffc8d-15b6-4132-8308-2826034d1cf7">
                     <propertyInstance
-                      Id="491a5d5a-7d5a-4d75-9f13-82c306bd8ef6"
+                      Id="80aa3f3c-d664-4beb-ba03-76e9232c7d0f"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="463701eb-484c-47f6-bc93-433ca220f399">
+                    Id="bafb93e5-0c9c-4e1a-8555-61cccc0c57fa">
                     <propertyInstance
-                      Id="07436e20-847a-48d5-a5ab-4859fb77682c"
+                      Id="a4228186-4b72-4a47-8cc9-1784fb70c3d6"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="94bb8be4-6b87-4cfe-afc5-aa8a77d6d603">
+                    Id="9decab5a-c044-4248-a2fb-c579120ab4f2">
                     <propertyInstance
-                      Id="cbff8bc3-99aa-4290-b615-731d0505ea31"
+                      Id="efeb1f6e-9225-4cfd-a8cb-1ff745c6a7e0"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="a8f5f588-466a-402d-8857-4a26bb8baf49">
+                    Id="8ffe7249-6695-4c08-9692-e1356b79af72">
                     <propertyInstance
-                      Id="8eaf4e42-518a-4e97-8ea0-21d261685a55"
+                      Id="af591238-fefa-42dd-966c-1e2fa8ad31c4"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="54f19057-ae21-4531-bc63-ee7eb2005032">
+                    Id="82a51a15-f53d-45f1-8fea-054566180c0d">
                     <propertyInstance
-                      Id="bda15173-f7a5-47a3-8503-7c591cf8f148"
+                      Id="c586b270-fca2-4557-acca-75b6f8875746"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="9583f607-b387-4b10-a480-b5dbc4cb6ad9">
+                    Id="a1403515-73af-4c3e-8869-583bde662096">
                     <propertyInstance
-                      Id="1d56f813-3139-452a-99da-d0892f7b8ec4"
+                      Id="a95c4312-0f00-4215-acbc-9a6955d7aeae"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -2489,10 +2961,34 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="cf81cf61-6bae-40d0-bba5-df1279c8760c"
+                  Id="dbabb72c-c4e6-4b09-a8aa-54b292aefb70"
                   name="numberTrain"
-                  direction="In"
-                  isUnique="false">
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="2fd47e8c-8159-4c00-91ab-90b0ef925f19"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DTicket Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DnumberTrain"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelProj.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a7ff2ca5-b52b-42a4-aece-dae00bf1614a"
+                  name="numberCar"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="59b565c5-6b1f-49b6-8991-42ebee9e7d53"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DTicket Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DnumberCar"
+                      tag="ViewCode" />
+                  </referencesInternal>
                   <type_NamedElement>
                     <primitiveTypeMoniker
                       Id="220a3521-e091-4221-bae9-3ef9018e845c"
@@ -2516,7 +3012,7 @@
         <referencesInternal>
           <reference
             Id="513184ba-006b-41f2-b05d-0bbfa9afe516"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerTrain"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerTrain"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -2572,7 +3068,7 @@
               LastKnownLocation="Package_2247.uml" />
           </generalization>
           <generalization
-            Id="3addf965-f2cb-4cb7-b2cd-7dc9f232a771"
+            Id="129be840-2977-4a02-94d7-86a743b2918f"
             isSubstitutable="false">
             <classMoniker
               Id="82572a68-ca57-431a-b897-7e40d2404126"
@@ -2586,7 +3082,7 @@
             name="Length"
             isLeaf="false"
             isStatic="false"
-            isReadOnly="false"
+            isReadOnly="true"
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
@@ -2594,7 +3090,7 @@
             <referencesInternal>
               <reference
                 Id="09d53522-d0b3-4ea4-8196-9aa345e2716b"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3DLength"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3DLength"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -2649,7 +3145,7 @@
                     <propertyInstance
                       Id="1fd483ff-84d2-4445-a82b-da004edc5cc9"
                       name="Set"
-                      value="private" />
+                      value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                 </propertyInstances>
               </stereotypeInstance>
@@ -2676,7 +3172,7 @@
             <referencesInternal>
               <reference
                 Id="01db6bc5-6abf-4aad-aad6-f4885747d402"
-                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D_car"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D_cars"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -2723,10 +3219,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="8f593632-ce62-4bf1-8ea6-34e72ed4dfd9"
-                LastKnownName="ModelProj::System::Collections::Generic::List&lt;PassengerCar&gt;"
-                LastKnownLocation="Package_2247.uml" />
+              <classMoniker
+                Id="f2589fb0-857e-4ca8-aaff-0ee8d3c56a6b"
+                LastKnownName="List&lt;PassengerCar‎&gt;"
+                LastKnownLocation="Package2_2244.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -2742,7 +3238,7 @@
             <referencesInternal>
               <reference
                 Id="108ebc4b-15e7-4661-a9f7-fd838ac31368"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D(Name%3DAddCar OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerCar)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D(Name%3DAddCar OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -2804,7 +3300,7 @@
                   <referencesInternal>
                     <reference
                       Id="f4acea06-c97c-4a8e-a89f-fb0e304aa9b9"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D(Name%3DAddCar OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerCar)]) ParameterIdentifier%3Dcar"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D(Name%3DAddCar OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar)]) ParameterIdentifier%3Dcar"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -2828,7 +3324,7 @@
             <referencesInternal>
               <reference
                 Id="5a8e938f-96d1-4858-88b0-feae0746fc1f"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D(Name%3DFind OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D(Name%3DFind OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -2902,7 +3398,7 @@
                   <referencesInternal>
                     <reference
                       Id="4607a875-7fb6-4db4-9792-1da602240514"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D(Name%3DFind OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DminPass"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D(Name%3DFind OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DminPass"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -2921,7 +3417,7 @@
                   <referencesInternal>
                     <reference
                       Id="b5169e13-fe7f-427d-9108-d9abdfc9740e"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D(Name%3DFind OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DmaxPass"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D(Name%3DFind OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DmaxPass"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -2945,7 +3441,7 @@
             <referencesInternal>
               <reference
                 Id="dcd71267-69d3-4953-bb0d-7ee0b088b9d3"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D(Name%3DRemoveCar OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerCar)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D(Name%3DRemoveCar OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -3007,7 +3503,7 @@
                   <referencesInternal>
                     <reference
                       Id="22495cbd-1856-4898-8fba-95d9d2d7a510"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D(Name%3DRemoveCar OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerCar)]) ParameterIdentifier%3Dcar"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D(Name%3DRemoveCar OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar)]) ParameterIdentifier%3Dcar"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -3021,71 +3517,6 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="e685c828-9126-4047-aafc-b5b7b9aaba3b"
-            name="PassengerTrain"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <referencesInternal>
-              <reference
-                Id="4be3fbc7-4096-491c-8dd7-4d02112fc6bb"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FDocuments%2FVisual Studio 2013%2FProjects%2FModelProj%2FRailTransport%2Fbin%2FDebug%2FRailTransport.dll&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D.ctor"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="65ed9c84-44b7-4b6c-a7cf-3680e9cf5d9f"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="3d9256fb-53d4-4025-9d2a-1c6f18bb6636">
-                    <propertyInstance
-                      Id="f3cbec2d-1e75-4858-91db-af0a22f13b7d"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="655a2fc1-94ad-492d-aec9-ee479ab2d94b">
-                    <propertyInstance
-                      Id="99591bdf-a671-4e81-8cde-43a054c22faa"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="3a58d2e0-cb89-474f-940e-d36a4a83d32c">
-                    <propertyInstance
-                      Id="3ed7bbcc-2ba7-4c4d-b268-65b26affcc3a"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="5464c713-60fe-4c64-aee7-e3e42fe6ba66">
-                    <propertyInstance
-                      Id="05b517fb-1b3b-4ce0-8023-8c26a7a458ae"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="dd50b9ed-7917-4529-94d4-e3a2ae124639">
-                    <propertyInstance
-                      Id="02b64ce1-aabb-46b7-bf5c-dff121fa6c19"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="5531dfac-515d-47ca-bb0b-2451773ecdf3">
-                    <propertyInstance
-                      Id="2ba577aa-4c13-4366-882f-0b3886ae9b5d"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-          </operation>
-          <operation
             Id="548df09e-84b3-43c6-9635-70572ce9699c"
             name="Sort"
             isLeaf="false"
@@ -3093,6 +3524,12 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a7bca86a-87ec-48a2-91b7-806e1a301faa"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3DSort"
+                tag="ViewCode" />
+            </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
                 Id="36b73078-b61b-42ec-b3a2-f93fffcf6563"
@@ -3152,6 +3589,12 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="05bb4aa7-7936-40bc-b1b5-dd60a3d7cb5b"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3DRemoveAllCars"
+                tag="ViewCode" />
+            </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
                 Id="c6545544-897f-4bdb-8751-f23be5fbd331"
@@ -3202,6 +3645,435 @@
                 </propertyInstances>
               </stereotypeInstance>
             </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="0ae995b7-16a7-454a-8b82-54dd9e45d7b5"
+            name="CountPassAndBaggage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0ea66557-93b9-4f2e-9e50-fed4fbae4983"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3DCountPassAndBaggage"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7a9cd487-68cc-44d6-9df9-608fa4bfbce9"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4969cbc6-551f-4284-b4a9-3ea0adc58495">
+                    <propertyInstance
+                      Id="49880039-1ba2-4771-9382-7562d819ae73"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="780f92c9-748a-47db-9f63-3502e687b0a0">
+                    <propertyInstance
+                      Id="401116e4-d221-4432-9d65-cf55ae802010"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3b5ea4df-cf16-4d38-80ae-8c3565f451ae">
+                    <propertyInstance
+                      Id="43ce5a8e-9993-4486-a9ea-2c5504fe543c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="213d23f8-468f-4344-8205-a6cb9443926d">
+                    <propertyInstance
+                      Id="84a2ac85-5a6e-40ab-8b49-74c0d0e0e20b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c5255468-4ec5-406b-bb94-e976daca892c">
+                    <propertyInstance
+                      Id="9808f483-0c70-45c6-8f59-add25a1a29d9"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ec3eb421-b0d3-4182-8d19-64de67f90583">
+                    <propertyInstance
+                      Id="a6c05afa-74ad-43e6-a43d-da65be888187"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="96236ff7-bdc0-4ab8-aa95-7421183d207d"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelProj.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b56e16cf-8242-4036-9bff-eab0b7b747b4"
+            name="AddCars"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1a8a20e7-a1f2-42a6-9f35-e5c8cb74823f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D(Name%3DAddCars OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DPassengerCar ArrayRank%3D1 ParentType%3DPassengerCar))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4b9233b0-ec8b-4873-9ef6-9faed1947cff"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="911062df-17f0-43b0-92f5-e90afd90870e">
+                    <propertyInstance
+                      Id="a5c99524-fa1d-4b50-82f1-80573649d83c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a7506435-2e10-4660-b856-2bc3ec1da839">
+                    <propertyInstance
+                      Id="6d4b98f1-5436-437b-85de-dc88c0920bca"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b4ae1349-2f7e-4d4e-8ded-dcc2bcc99597">
+                    <propertyInstance
+                      Id="2d415955-3cc6-44d6-adbd-84a2c2f8c645"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="181f7164-b1cf-4bc5-805b-fbe26c4fff4e">
+                    <propertyInstance
+                      Id="5f7ee117-5613-4278-8650-2f3c816ad27a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7a35232f-e0ab-4f0c-8b93-58a32b2c7dbb">
+                    <propertyInstance
+                      Id="368bafab-f5e9-4f18-8bec-6b16430f4745"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c28cc30c-89bf-4f68-9082-f0d99ba4d491">
+                    <propertyInstance
+                      Id="ee0a6fa5-9503-4135-b804-b885a82a16f3"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f53ec482-fa9d-445c-812b-e0ddfa02299a"
+                  name="cars"
+                  direction="In"
+                  isOrdered="true">
+                  <referencesInternal>
+                    <reference
+                      Id="01707731-0d11-4e8e-8c88-c106fba7c89c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D(Name%3DAddCars OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DPassengerCar ArrayRank%3D1 ParentType%3DPassengerCar))]) ParameterIdentifier%3Dcars"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="cf4d7b6f-2307-49c2-a802-0292a0555e4c"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="78aca1a3-fb2e-43db-ac72-f9f1d793122a"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="8fb42499-fed8-4aa2-b12a-2f8a76dd5a9f"
+                      LastKnownName="PassengerCar"
+                      LastKnownLocation="Package_2247.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="5dc1f74b-3cb2-4f9d-8a94-d2b675147644"
+            name="AddPassenger"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9437a238-6d40-49e5-98cd-7ae706e721fe"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D(Name%3DAddPassenger OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassenger)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1a96f722-5070-41e4-8ef3-81ffd3acd1fe"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8e8aab69-aadc-4faf-84c8-5c857ec84c0b">
+                    <propertyInstance
+                      Id="5d969b11-3ba6-4dc7-99bd-d0ef7ef4b13b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e840564-92ae-4a27-a819-7ad3a71c60dc">
+                    <propertyInstance
+                      Id="bda5f712-6715-48a7-9a7a-65d9b8b6399b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e311ef65-ac84-4d9f-af10-47d6fffed4d6">
+                    <propertyInstance
+                      Id="d733fbe1-936a-494d-a044-e6afe93aed76"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="083067f2-372b-4c4a-8faf-dc2821be1a61">
+                    <propertyInstance
+                      Id="0e99d3f5-df7d-493c-9661-bd471b2ecb15"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9c0af09b-9a4e-467b-be50-0d3768742cb9">
+                    <propertyInstance
+                      Id="9273555f-c3eb-4d4b-a5dc-2d9afa35d6f7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9bc22bc2-dffc-48a7-9801-47fad830529c">
+                    <propertyInstance
+                      Id="f96c734b-a121-433b-88e8-db483438ba64"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="82b9c8e8-ac1e-43dc-87ca-1d1745cc0e70"
+                  name="pass"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="188b5032-bbe9-42b2-8963-d59422bae5be"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D(Name%3DAddPassenger OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassenger)]) ParameterIdentifier%3Dpass"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="5b127bdf-c1d1-4093-a8ca-4487e34e781f"
+                      LastKnownName="Passenger"
+                      LastKnownLocation="Package_2247.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="051a498e-faa6-4007-b338-d53b3256181d"
+            name="PassengerTrain"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ca7e4578-d6e5-4bf9-a598-a0be9e88412e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a0ddd414-8ce8-412b-b214-7d1947c8aa54"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c21a3006-7a0e-4115-970f-1c5c9bd6abd5">
+                    <propertyInstance
+                      Id="d76b573e-e80e-4150-baf2-ba93726943e0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3078ef27-61fe-4e8b-91ac-0589a66c8574">
+                    <propertyInstance
+                      Id="568164b9-8496-4cdd-8626-7f2f08a02f8f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="42122a90-bea7-4823-9d30-cd352792a9b6">
+                    <propertyInstance
+                      Id="3c39ac48-1a00-4ab9-99bf-78e5beaa02af"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="abce9a31-5cb4-440c-9938-685a5ccc327d">
+                    <propertyInstance
+                      Id="a1db7b8e-0b14-449b-a870-fe16a51972ad"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1bb5f143-495f-4e3a-afbc-4c5ed9c91132">
+                    <propertyInstance
+                      Id="b5f9713b-9202-4205-ab5d-b0aa2ffca362"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1b046df0-6dac-4e11-91b1-4150356ceada">
+                    <propertyInstance
+                      Id="9838940e-b4e7-4817-8ac9-4cd1dc7b0fcf"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="30d06493-7dd7-498d-8bfd-704ab89bf858"
+            name="AddPassengers"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9b2de019-568f-42de-9fb9-2ff360638627"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D(Name%3DAddPassengers OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DPassenger ArrayRank%3D1 ParentType%3DPassenger))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fee8054b-0897-4b33-acbf-73af15a42d9a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6383c5cd-3294-4d7b-8d67-ef9bcdb8a8df">
+                    <propertyInstance
+                      Id="36305468-3c4c-448b-91b0-113173d882d9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6478129b-90f8-4916-b2d9-74cfd9606105">
+                    <propertyInstance
+                      Id="729955ac-872b-4789-9aa0-db870d7c47e6"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="62f416e5-dd58-40a7-9c94-0bc1f25d94fc">
+                    <propertyInstance
+                      Id="ea9ace68-91dd-4950-858a-5eedbac9654a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba87ada9-3100-4c30-8007-2e3e3abd70a1">
+                    <propertyInstance
+                      Id="227c6eab-25bb-47f2-ba05-6d65cad968fb"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="77ccaf78-b000-4e52-ac7c-e70675e45193">
+                    <propertyInstance
+                      Id="12cd2432-aeee-4e10-9a6a-8f9a68ba025e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1d6f3419-14f0-48ca-aa4a-c25fa5e4a412">
+                    <propertyInstance
+                      Id="19cc662f-c912-4f03-bbfb-6d2121bd01cc"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6bc42be0-10f9-484f-be9e-1114538b8778"
+                  name="pass"
+                  direction="In"
+                  isOrdered="true">
+                  <referencesInternal>
+                    <reference
+                      Id="d253e3e6-9581-4dac-b13f-782ddbaaa92d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D(Name%3DAddPassengers OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DPassenger ArrayRank%3D1 ParentType%3DPassenger))]) ParameterIdentifier%3Dpass"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="346ad39c-5cd9-4595-9c22-efea5bc0f170"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ed21c9ae-4736-41f6-ba81-248c9dadb2bb"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="5b127bdf-c1d1-4093-a8ca-4487e34e781f"
+                      LastKnownName="Passenger"
+                      LastKnownLocation="Package_2247.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>

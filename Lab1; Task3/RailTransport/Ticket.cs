@@ -19,9 +19,16 @@ namespace RailTransport
 			private set;
 		}
 
-		public Ticket(int numberTrain)
+        public int NumberCar
+        {
+            get;
+            private set;
+        }
+
+        public Ticket(int numberTrain, int numberCar)
 		{
             NumberTrain = numberTrain;
+            NumberCar = numberCar;
 		}
 
 	}

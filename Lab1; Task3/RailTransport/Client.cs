@@ -6,18 +6,56 @@
 //------------------------------------------------------------------------------
 namespace RailTransport
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
 
-	public static class Client
-	{
-		public static void Main()
-		{
-			throw new System.NotImplementedException();
-		}
+    public static class Client
+    {
+        public static void Main()
+        {
+            int numTrain=64;
+            try
+            {
+                PassengerTrain train = new PassengerTrain(numTrain);
+                train.AddCars(
+                new PassengerCar[]{
+                new PassengerCar(1,TypeCar.Platskartny),
+                new PassengerCar(2,TypeCar.Platskartny),
+                new PassengerCar(3,TypeCar.Kupe),
+                new PassengerCar(4,TypeCar.Kupe),
+                new PassengerCar(5,TypeCar.SpalnyVagon),
+                new PassengerCar(6,TypeCar.Platskartny),
+                new PassengerCar(7,TypeCar.Platskartny),
+                new PassengerCar(8,TypeCar.Kupe),
+                new PassengerCar(9,TypeCar.Platskartny)});
+                train.AddPassengers(
+                    new Passenger[]{
+                    new Passenger("Vasya"){Ticket=new Ticket(numTrain,1)},
+                    new Passenger("Petya"){Ticket=new Ticket(numTrain,1)},
+                    new Passenger("Ivan"){Ticket=new Ticket(numTrain,1),HasBaggage=true},
+                    new Passenger("Ivan2"){Ticket=new Ticket(numTrain,2)},
+                    new Passenger("Sasha"){Ticket=new Ticket(numTrain,1)},
+                    new Passenger("Sergey"){Ticket=new Ticket(numTrain,2),HasBaggage=true},
+                    new Passenger("Vasya"){Ticket=new Ticket(numTrain,3)},
+                    new Passenger("Vasya"){Ticket=new Ticket(numTrain,4)},
+                    new Passenger("Vasya"){Ticket=new Ticket(numTrain,5)},
+                    new Passenger("Vasya"){Ticket=new Ticket(numTrain,8)},
+                    });
+                Console.WriteLine("Initial Train: {0}", train.ToString());
+                train.Sort();
+                Console.WriteLine("Sorted Train: {0}", train.ToString());
+                Console.WriteLine("Count Passenger And Baggage: {0}", train.CountPassAndBaggage());
+                foreach (var car in train.Find(3, 5))
+                {
+                    Console.WriteLine("Find Cars: {0}", car.ToString());
+                }
+                Console.ReadKey();
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+        }
 
-	}
+    }
 }
 

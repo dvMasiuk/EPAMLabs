@@ -15,7 +15,6 @@
       <class
         Id="f2589fb0-857e-4ca8-aaff-0ee8d3c56a6b"
         name="List&lt;PassengerCar‎&gt;"
-        visibility="Private"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
