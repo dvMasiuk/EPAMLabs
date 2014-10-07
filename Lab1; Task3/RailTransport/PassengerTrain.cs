@@ -6,57 +6,57 @@
 //------------------------------------------------------------------------------
 namespace RailTransport
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
 
-	public class PassengerTrain : Train<PassengerCar>
-	{
+    public class PassengerTrain : Train<PassengerCar>
+    {
+        private IList<PassengerCar> _passengerCars;
+
         public override int Length
         {
-            get { return this._cars.Count; }
+            get { return this._passengerCars.Count; }
         }
-
-        private List<PassengerCar> _cars = null;
 
         public override void AddCar(PassengerCar car)
         {
-            this._cars.Add(car);
+            this._passengerCars.Add(car);
         }
 
         public virtual IEnumerable<PassengerCar> Find(int minPass, int maxPass)
         {
             return
-            this._cars.Where(x =>
+            this._passengerCars.Where(x =>
             { return minPass <= x.CountTakenSeats && x.CountTakenSeats <= maxPass; });
         }
 
         public override void RemoveCar(PassengerCar car)
         {
-            this._cars.Remove(car);
+            this._passengerCars.Remove(car);
         }
 
         public PassengerTrain(int number)
         {
             Number = number;
-            this._cars = new List<PassengerCar>();
+            this._passengerCars = new List<PassengerCar>();
         }
 
-        public override void Sort()
+        public override IEnumerable<PassengerCar> Sort()
         {
-            this._cars.Sort();
+            return this._passengerCars.OrderBy(x => x);
         }
 
         public override void RemoveAllCars()
         {
-            this._cars.Clear();
+            this._passengerCars.Clear();
         }
-		
-		public virtual int CountPassAndBaggage()
-		{
-            return this._cars.Sum(x => x.CountBaggage + x.CountPassengers);
-		}
+
+        public virtual int CountPassAndBaggage()
+        {
+            return this._passengerCars.Sum(x => x.CountBaggage + x.CountPassengers);
+        }
 
 
         public override void AddCars(PassengerCar[] cars)
@@ -71,7 +71,7 @@ namespace RailTransport
         {
             if (pass.Ticket.NumberTrain == Number)
             {
-                this._cars.First(x => x.Number == pass.Ticket.NumberCar).AddPassenger(pass);
+                this._passengerCars.First(x => x.Number == pass.Ticket.NumberCar).AddPassenger(pass);
             }
         }
 
@@ -85,14 +85,13 @@ namespace RailTransport
 
         public override string ToString()
         {
-            StringBuilder sb=new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.AppendFormat("Train №{0}", this.Number);
-            this._cars.ForEach(x=>
-                {
-                    sb.Append("\n");
-                    sb.Append(x.ToString());
-                }
-                );
+            foreach (var car in this._passengerCars)
+            {
+                sb.Append("\n");
+                sb.Append(car.ToString());
+            }
             return sb.ToString();
         }
     }

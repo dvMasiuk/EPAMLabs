@@ -192,7 +192,7 @@
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
-            <class Id="c736db42-b971-4dc3-88c9-f2507c2b95c8" name="PassengerCar" visibility="Private" isAbstract="false" isLeaf="false" isActiveClass="false">
+            <class Id="c736db42-b971-4dc3-88c9-f2507c2b95c8" name="PassengerCar" isAbstract="false" isLeaf="false" isActiveClass="false">
               <referencesInternal>
                 <reference Id="9f828c24-c41e-4cea-8ddb-ddcdcfebd2f9" handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DPassengerCar ArrayRank%3D1 ParentType%3DPassengerCar)" tag="ViewCode">
                   <elementDefinition Id="47b7464a-baf9-4967-8f8c-1245ef50ee28" />
@@ -279,6 +279,69 @@
                     </associationHasOwnedEnds>
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="dad2bc5b-2b10-429a-beaa-ca7320d9bad6" />
+                </association>
+                <association Id="d22b9186-67bc-48f3-b283-8fa252aa8bb7" isDerived="false" sourceEndRoleName="PassengerCar" targetEndRoleName="Passenger" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="1811f6b4-e158-454d-b182-5d2d78cf4bce" LastKnownName="Passenger" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="b9244c54-25e4-4190-b410-6a752552524d" name="PassengerCar" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="d64a6ce5-fc2e-4a04-ac59-398869397133" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="c26690ea-dd04-461e-aa10-f2c6475106c9" name="Passenger" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <appliedStereotypesInternal>
+                          <stereotypeInstance Id="e8783959-7633-4eab-b417-288b4aa04a72" name="field" profile="CSharpProfile">
+                            <elementDefinition Id="b922f437-2cd9-4b76-9038-c227a76543cc" />
+                            <propertyInstances>
+                              <stereotypeInstanceHasPropertyInstances Id="0ab8a4ce-7c52-4883-99ec-2e75aa8c19b0">
+                                <propertyInstance Id="bc621626-3a7d-4de9-8dcb-7a7696a7ee39" name="ClrAttributes">
+                                  <elementDefinition Id="ba8384de-0976-4249-a25f-b912feb628d6" />
+                                </propertyInstance>
+                                <elementDefinition Id="e762fa5d-6861-495f-8ca0-7dc2551bfd34" />
+                              </stereotypeInstanceHasPropertyInstances>
+                              <stereotypeInstanceHasPropertyInstances Id="9210162d-d9e0-4b45-a00d-6ed974ddce77">
+                                <propertyInstance Id="a37cf452-15c6-4da6-a977-02e1d7e2a7c0" name="IsConst" value="false">
+                                  <elementDefinition Id="f6eb4fb4-7ef8-4c14-82a1-f5ab2448fa02" />
+                                </propertyInstance>
+                                <elementDefinition Id="495586cf-7c5b-4dff-8314-7442f3f9dc28" />
+                              </stereotypeInstanceHasPropertyInstances>
+                              <stereotypeInstanceHasPropertyInstances Id="09e405a7-aead-4758-b8f6-a7a3df733485">
+                                <propertyInstance Id="dacf2db4-79d0-4213-8b2e-3ecbfa982913" name="IsNullable" value="false">
+                                  <elementDefinition Id="b7370125-3a2d-416b-b65f-113266c7927d" />
+                                </propertyInstance>
+                                <elementDefinition Id="9f59ca69-5a0c-42c7-b501-ef241e98f005" />
+                              </stereotypeInstanceHasPropertyInstances>
+                              <stereotypeInstanceHasPropertyInstances Id="41b26b8e-e74e-41d1-881f-896ad7cba2e5">
+                                <propertyInstance Id="663f9c6e-ee65-4617-9039-05b51588974e" name="IsVolatile" value="false">
+                                  <elementDefinition Id="4c7ad4cd-3865-4225-8d9b-b2b8ce781f01" />
+                                </propertyInstance>
+                                <elementDefinition Id="f315453a-3cd5-4dec-9a1f-2198493a3e4c" />
+                              </stereotypeInstanceHasPropertyInstances>
+                              <stereotypeInstanceHasPropertyInstances Id="fad7f6ea-89a0-47cb-8751-0ac349ff3b97">
+                                <propertyInstance Id="1476d226-033d-42aa-b740-eb4ff8b3f337" name="PackageVisibility" value="internal">
+                                  <elementDefinition Id="84b50a5b-d66b-4a0e-8d77-7daf7c6c83e6" />
+                                </propertyInstance>
+                                <elementDefinition Id="5f9f9679-c934-4380-8267-8e1ab7ba85e0" />
+                              </stereotypeInstanceHasPropertyInstances>
+                            </propertyInstances>
+                          </stereotypeInstance>
+                        </appliedStereotypesInternal>
+                        <lowerValueInternal>
+                          <literalString Id="3fcb6ed2-45cc-4eb4-aaed-5745bd104019" name="Lower" value="*">
+                            <elementDefinition Id="4c5b8343-f6a5-4a46-b885-7e34a9ed3534" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="3165908b-5d49-4940-b747-fa12a7354997" name="Upper" value="*">
+                            <elementDefinition Id="ce4274f1-2dbb-4352-afc5-8d01d8695de4" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="300b19b2-63c0-44ee-880d-37a729ff9f3c" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="53e68af9-88df-4170-911b-4788a8dd7e25" />
                 </association>
               </targetEnds>
               <ownedAttributesInternal>
@@ -642,54 +705,6 @@
                     <referencedTypeMoniker Id="a4014e06-5d5b-4b8f-bf25-b42761fb0856" LastKnownName="TypeCar" />
                   </type_NamedElement>
                 </property>
-                <property Id="979701c5-9c71-421d-b4ef-01eeed7bb9ac" name="_passengers" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <referencesInternal>
-                    <reference Id="4ff9868c-711a-41b8-8d02-d5c2691c7ce7" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3D_passengers" tag="ViewCode">
-                      <elementDefinition Id="900b638d-bcb9-4c91-a01c-61d6229e433d" />
-                    </reference>
-                  </referencesInternal>
-                  <appliedStereotypesInternal>
-                    <stereotypeInstance Id="5601f4b3-a397-4e4b-b4c8-3236561a2d98" name="field" profile="CSharpProfile">
-                      <elementDefinition Id="a08b8fc6-f321-46ef-9cbc-4db5eef45e2a" />
-                      <propertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="495be918-28df-40c5-b61e-ef49a0d27e87">
-                          <propertyInstance Id="b182832f-c786-42c1-a2f4-6f6dd875d1fb" name="ClrAttributes">
-                            <elementDefinition Id="045a3900-b1ce-4881-b0a4-add71899c2bd" />
-                          </propertyInstance>
-                          <elementDefinition Id="d08d6655-a334-4efe-985d-7cea15b4a3b3" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="af0d8015-41c4-44a8-b02e-d2341ca3672d">
-                          <propertyInstance Id="c9879ba9-c4af-40d9-bf86-20649a825ed4" name="IsConst" value="false">
-                            <elementDefinition Id="9d1b6dda-6866-46fa-8a6c-af9ead614c45" />
-                          </propertyInstance>
-                          <elementDefinition Id="c58985ce-7321-4bcd-b90e-5444723883ed" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="190af7de-4c41-4658-aced-7a65505fc558">
-                          <propertyInstance Id="8e7ec45f-65b8-49fb-b584-785ec0096cf8" name="IsNullable" value="false">
-                            <elementDefinition Id="5c9d2904-e423-451f-aa9e-e32e60a2d49d" />
-                          </propertyInstance>
-                          <elementDefinition Id="b89e7065-0cf4-4741-81ec-9157dbc5c49e" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="eb443a34-c99d-424f-bb3f-457a66e8b067">
-                          <propertyInstance Id="ab4747f7-6904-43f8-99dc-712527d980b7" name="IsVolatile" value="false">
-                            <elementDefinition Id="31a924df-c8c7-4870-977b-fde60299c933" />
-                          </propertyInstance>
-                          <elementDefinition Id="2365fbb0-a94f-49d5-8e9b-119cfc432711" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="79ba8c59-ca28-4e8d-b2b3-65e825189111">
-                          <propertyInstance Id="22ef7ea1-030e-4e4f-a35a-3700f1b4d976" name="PackageVisibility" value="internal">
-                            <elementDefinition Id="c00e0e9e-5bff-474a-b420-f21c27b99641" />
-                          </propertyInstance>
-                          <elementDefinition Id="fefd494b-9e9a-45b8-9a6d-50a3adb8e62d" />
-                        </stereotypeInstanceHasPropertyInstances>
-                      </propertyInstances>
-                    </stereotypeInstance>
-                  </appliedStereotypesInternal>
-                  <elementDefinition Id="33f5f7ad-4741-4e14-89c8-d78e96061649" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="1f6d8f56-2d50-478f-9e08-87a044e15c62" LastKnownName="List&lt;Passenger‎&gt;" />
-                  </type_NamedElement>
-                </property>
               </ownedAttributesInternal>
               <ownedOperationsInternal>
                 <operation Id="44bc2f08-cb40-442e-9189-c2d0831694c3" name="PassengerCar" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -825,9 +840,6 @@
                     <operationHasOwnedParameters>
                       <parameter Id="795c8cb9-559c-4c0d-9304-aa2d5657e7d6" direction="Return" isUnique="false">
                         <elementDefinition Id="9bf56a0c-c50e-46de-b4f9-9250b0fda572" />
-                        <type_NamedElement>
-                          <referencedTypeMoniker Id="68cbfc10-5ed3-4807-9d0e-d44904dd0729" LastKnownName="void" />
-                        </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
                     <operationHasOwnedParameters>
@@ -899,9 +911,6 @@
                     <operationHasOwnedParameters>
                       <parameter Id="8ae74443-0113-48ed-8e1f-da0ded95290a" direction="Return" isUnique="false">
                         <elementDefinition Id="5cbf560d-1bbe-473c-91cb-f741a2bf2859" />
-                        <type_NamedElement>
-                          <referencedTypeMoniker Id="68cbfc10-5ed3-4807-9d0e-d44904dd0729" LastKnownName="void" />
-                        </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
                     <operationHasOwnedParameters>
@@ -973,9 +982,6 @@
                     <operationHasOwnedParameters>
                       <parameter Id="aa1eba35-0fda-4314-8d20-c95348737d3a" direction="Return" isUnique="false">
                         <elementDefinition Id="69e72dca-9cf4-4739-ac32-f3a8beb19b55" />
-                        <type_NamedElement>
-                          <referencedTypeMoniker Id="68cbfc10-5ed3-4807-9d0e-d44904dd0729" LastKnownName="void" />
-                        </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
@@ -1236,7 +1242,7 @@
                 </redefinableTemplateSignature>
               </ownedRedefinableTemplateSignatureInternal>
               <ownedAttributesInternal>
-                <property Id="facc6a78-650b-4444-9a49-13fd13d11310" name="Length" isLeaf="false" isStatic="false" isReadOnly="true" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="facc6a78-650b-4444-9a49-13fd13d11310" name="Length" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <referencesInternal>
                     <reference Id="256ea823-a092-4e5b-b995-c41d583351f2" handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) Member%3DLength" tag="ViewCode">
                       <elementDefinition Id="7089050f-fdbe-4a08-8239-13e7aae706e7" />
@@ -1283,7 +1289,7 @@
                           <elementDefinition Id="4fdfc0bf-7c38-4882-93a8-5929c2d52372" />
                         </stereotypeInstanceHasPropertyInstances>
                         <stereotypeInstanceHasPropertyInstances Id="84c6ea96-6d95-4178-be0f-ca05119be60b">
-                          <propertyInstance Id="373ba885-6f2e-435a-94bf-8a6d92cf08b6" name="Set" value="none">
+                          <propertyInstance Id="373ba885-6f2e-435a-94bf-8a6d92cf08b6" name="Set" value="private">
                             <elementDefinition Id="238a0488-ed27-4638-baf0-b56bfe1f1fc4" />
                           </propertyInstance>
                           <elementDefinition Id="539a083d-177e-446e-bdfb-00050c691d64" />
@@ -1343,7 +1349,7 @@
                           <elementDefinition Id="581692f4-2745-40dd-8ebf-e71cc118f7e8" />
                         </stereotypeInstanceHasPropertyInstances>
                         <stereotypeInstanceHasPropertyInstances Id="050e82bd-126c-4c86-abbe-08f8106c224b">
-                          <propertyInstance Id="847f83a1-3304-44c6-b002-d4d9cf9672ab" name="Set" value="public">
+                          <propertyInstance Id="847f83a1-3304-44c6-b002-d4d9cf9672ab" name="Set" value="protected">
                             <elementDefinition Id="a744b0f3-86fa-408e-bd5f-85c71ed4fc5c" />
                           </propertyInstance>
                           <elementDefinition Id="6c1b3f0c-a022-4a56-8e63-2467983f6b0d" />
@@ -1408,6 +1414,16 @@
                     </stereotypeInstance>
                   </appliedStereotypesInternal>
                   <elementDefinition Id="5e8da53f-a5c0-40d9-bfe4-478e0675632d" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="f382a732-488a-43a0-8e01-e38cfd032292" direction="Return">
+                        <elementDefinition Id="01f24858-6c36-489c-b369-20671a8aa88a" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="785f755f-00b6-4988-a80a-369a9be113b9" LastKnownName="IEnumerable" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
                 </operation>
                 <operation Id="a5b5b24d-6efe-41b7-bb25-21a80341df5d" name="RemoveAllCars" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
                   <referencesInternal>
@@ -1578,25 +1594,10 @@
                   <elementDefinition Id="7911fefb-bea4-4450-9e08-c7cb33568193" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="7c6a5c45-0958-4f7b-afc9-8187a3b26bee" name="cars" direction="In" isOrdered="true">
-                        <referencesInternal>
-                          <reference Id="cf30dd69-8889-4127-9908-85375ada1410" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) Member%3D(Name%3DAddCars OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(ArrayRank%3D1 ParentType%3D(Type%3D(Name%3DTrain GenericParameterCount%3D1) ParameterIdentifier%3D0)))]) ParameterIdentifier%3Dcars" tag="ViewCode">
-                            <elementDefinition Id="c13e26e8-2f4d-4c38-8ec6-9e9aaaa402b9" />
-                          </reference>
-                        </referencesInternal>
-                        <lowerValueInternal>
-                          <literalString Id="04575705-4c09-44d2-bf2a-f25d88f4ce32" name="Lower" value="*">
-                            <elementDefinition Id="58fe293f-3050-4280-b20d-28c4af0772d4" />
-                          </literalString>
-                        </lowerValueInternal>
-                        <upperValueInternal>
-                          <literalString Id="67b1ade1-d72d-4962-8e99-7a575d382982" name="Upper" value="*">
-                            <elementDefinition Id="7accbb4e-6d95-4d25-8f6b-a6958fe72d27" />
-                          </literalString>
-                        </upperValueInternal>
-                        <elementDefinition Id="ba8c5113-2a31-4de0-8b8b-9b9fde475ae4" />
+                      <parameter Id="8a7aad32-3947-477f-bf58-0b0263e2e36c" name="cars" direction="In" isUnique="false">
+                        <elementDefinition Id="32c63957-6426-4906-948f-42abdf7de3a0" />
                         <type_NamedElement>
-                          <referencedTypeMoniker Id="72cb613f-294f-4681-9d8b-bcd82df9ff7e" LastKnownName="T‎[]" />
+                          <referencedTypeMoniker Id="7e835b03-b612-44d5-8798-6e914d783ed7" LastKnownName="T‎[]" />
                         </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
@@ -1667,57 +1668,6 @@
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
-                </operation>
-                <operation Id="06ba162e-b278-4fbe-a8cb-8ca3c027f773" name="Train" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <referencesInternal>
-                    <reference Id="beaa0f9a-e52d-45e5-8e17-844bc4fa316d" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) Member%3D.ctor" tag="ViewCode">
-                      <elementDefinition Id="ee6c55de-75aa-4e13-8033-4f3f44a5fe35" />
-                    </reference>
-                  </referencesInternal>
-                  <appliedStereotypesInternal>
-                    <stereotypeInstance Id="0c445c8e-92cf-4b46-8959-39c58c813dac" name="method" profile="CSharpProfile">
-                      <elementDefinition Id="b5b1b763-dc31-4138-9891-9a66fb0a294e" />
-                      <propertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="6a8669d3-76fd-499e-a656-d257268f81f5">
-                          <propertyInstance Id="7475cd82-259a-4367-ade9-20f3be6ecdc2" name="ClrAttributes">
-                            <elementDefinition Id="089b1969-8ca0-489e-acf7-56fd1d3a3906" />
-                          </propertyInstance>
-                          <elementDefinition Id="e3eaaef9-42ad-4dcb-8001-7a96348828b3" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="653bf4f7-0deb-4c35-88a9-2aea8e503100">
-                          <propertyInstance Id="e11888c4-8648-4451-a2f5-75db5da5e619" name="IsPartial" value="false">
-                            <elementDefinition Id="6e591308-debb-471c-b871-a338999bb44a" />
-                          </propertyInstance>
-                          <elementDefinition Id="f9ef273e-e6d3-41d4-8593-b76bdccf50d1" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="50f6edf0-3384-4121-aac2-e3b355a13a56">
-                          <propertyInstance Id="06399ed1-6d65-4db0-b0cc-36a084f9e201" name="IsUnsafe" value="false">
-                            <elementDefinition Id="0800eea8-58f3-4274-b2b1-7ae2b15f53d9" />
-                          </propertyInstance>
-                          <elementDefinition Id="16100227-bdd3-4e9f-b564-915a6ddcefbe" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="91fdbd53-fb21-44f8-8db4-98e9fd70e0af">
-                          <propertyInstance Id="d573737c-9e79-4518-a4a0-55c173fa59ee" name="Inheritance" value="none">
-                            <elementDefinition Id="5a81a890-3bfd-4897-91be-fea145fcb09b" />
-                          </propertyInstance>
-                          <elementDefinition Id="fbe0231e-d498-4a5d-989e-5b7a795c51fa" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="6a58d5fd-f406-49d4-bcb2-2e936edca6d3">
-                          <propertyInstance Id="c76bc1c8-7f10-4042-ad9c-1fe8aae4afac" name="PackageVisibility" value="internal">
-                            <elementDefinition Id="3eeadbbe-787f-411f-97fb-f741b292366b" />
-                          </propertyInstance>
-                          <elementDefinition Id="14501eb5-076b-47af-be3c-437840d4c4d3" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="a45d7e61-5ca7-45f2-9e7e-ada6e34884e8">
-                          <propertyInstance Id="6cf60fe8-bbad-43e2-ae5e-05e9892fcbba" name="params" value="false">
-                            <elementDefinition Id="790236a3-20fd-49af-a407-4b54f1202272" />
-                          </propertyInstance>
-                          <elementDefinition Id="199876f9-9a97-4f14-aec9-948d8b96ac0b" />
-                        </stereotypeInstanceHasPropertyInstances>
-                      </propertyInstances>
-                    </stereotypeInstance>
-                  </appliedStereotypesInternal>
-                  <elementDefinition Id="f8674e35-c8c1-4dd8-86f7-23b715dec515" />
                 </operation>
               </ownedOperationsInternal>
             </class>
@@ -2359,6 +2309,71 @@
                   <elementDefinition Id="129be840-2977-4a02-94d7-86a743b2918f" />
                 </generalization>
               </generalsInternal>
+              <targetEnds>
+                <association Id="3739de8f-269e-460e-85de-543fcc822b3e" isDerived="false" sourceEndRoleName="PassengerTrain" targetEndRoleName="PassengerCar" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="c736db42-b971-4dc3-88c9-f2507c2b95c8" LastKnownName="PassengerCar" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="a2793a22-5ff5-4149-84b7-52f8f6512ff7" name="PassengerTrain" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="1a562803-53b5-469e-873e-e815c9e05c78" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="764e6c45-82d5-40ae-9357-30e1c0082c1d" name="PassengerCar" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <appliedStereotypesInternal>
+                          <stereotypeInstance Id="a7ddcef9-c245-49cd-b871-f316799293a9" name="field" profile="CSharpProfile">
+                            <elementDefinition Id="eb524e7c-68a2-4d42-9c26-75f937069abc" />
+                            <propertyInstances>
+                              <stereotypeInstanceHasPropertyInstances Id="143517f8-1c80-4653-8706-77f809fef8c6">
+                                <propertyInstance Id="827f7eb7-2d62-445f-9acc-69f91f25f5bc" name="ClrAttributes">
+                                  <elementDefinition Id="2ecda4fe-4c3b-4b65-bca7-edd4f89cf079" />
+                                </propertyInstance>
+                                <elementDefinition Id="a1c3e3f1-38d0-44e9-8a9f-4ab00d3d69a8" />
+                              </stereotypeInstanceHasPropertyInstances>
+                              <stereotypeInstanceHasPropertyInstances Id="85b9f785-5750-4e9b-8611-b05c7b84776d">
+                                <propertyInstance Id="97b322fe-7097-498a-b5b1-a0cfb2b1ffd3" name="IsConst" value="false">
+                                  <elementDefinition Id="da2dd514-6cb8-45c8-baf4-2f1c2d0f2efe" />
+                                </propertyInstance>
+                                <elementDefinition Id="8661935b-7656-4e99-ab0a-625d01fd2cb7" />
+                              </stereotypeInstanceHasPropertyInstances>
+                              <stereotypeInstanceHasPropertyInstances Id="ad2d6544-238d-4cdf-94b0-584397249b9b">
+                                <propertyInstance Id="0d610b41-bbff-44e1-914a-5fa02e918189" name="IsNullable" value="false">
+                                  <elementDefinition Id="c7e50bd8-d8e0-4a6e-8c3c-14cac8d3e97f" />
+                                </propertyInstance>
+                                <elementDefinition Id="b028cf81-24cb-487f-8dd6-31c75a1ddc43" />
+                              </stereotypeInstanceHasPropertyInstances>
+                              <stereotypeInstanceHasPropertyInstances Id="64360079-8472-4a48-af88-93ab2bd96cb7">
+                                <propertyInstance Id="5c6811b2-4ff2-418f-b9a3-7a52b7ce025e" name="IsVolatile" value="false">
+                                  <elementDefinition Id="66c9a6e8-fb44-4344-b2c6-285536f4b46f" />
+                                </propertyInstance>
+                                <elementDefinition Id="341af60a-a85b-4e5b-9be5-000314b627e5" />
+                              </stereotypeInstanceHasPropertyInstances>
+                              <stereotypeInstanceHasPropertyInstances Id="e03d8842-563f-4854-8b10-d7c1bb6bebfa">
+                                <propertyInstance Id="68a5ac56-89f8-4d6b-b834-2aba71d8b37b" name="PackageVisibility" value="internal">
+                                  <elementDefinition Id="3c3b2575-4e45-473b-9734-c40adb299f1e" />
+                                </propertyInstance>
+                                <elementDefinition Id="d284a813-a7c2-4a85-93c9-e031f8c6216f" />
+                              </stereotypeInstanceHasPropertyInstances>
+                            </propertyInstances>
+                          </stereotypeInstance>
+                        </appliedStereotypesInternal>
+                        <lowerValueInternal>
+                          <literalString Id="33238c99-e110-4d4c-acea-dc19166ed0a2" name="Lower" value="1">
+                            <elementDefinition Id="dd6d6035-7141-4ee7-bd16-6a58fe495e07" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="df708a0e-5774-4d8b-b9bf-cf12ebb1823b" name="Upper" value="*">
+                            <elementDefinition Id="f873c567-edbd-41ee-a8f9-ad1efb4c9bdd" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="da008bec-b759-4b7c-847f-98c6b53a33cf" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="49d66c03-7a8a-4bb1-a18b-882dd695efda" />
+                </association>
+              </targetEnds>
               <ownedAttributesInternal>
                 <property Id="e4c2d195-33da-49a2-9ac2-303281e5019c" name="Length" isLeaf="false" isStatic="false" isReadOnly="true" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <referencesInternal>
@@ -2418,54 +2433,6 @@
                   <elementDefinition Id="814a9630-5f74-439d-99c7-2f1a5df0ce27" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="2b920181-c97b-419e-8e8a-412dac68becd" LastKnownName="Integer" />
-                  </type_NamedElement>
-                </property>
-                <property Id="2b012558-dab0-40b3-bf9a-f38363cae2bd" name="_cars" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <referencesInternal>
-                    <reference Id="4cdb421d-7af5-4dc2-b1e8-69b0c08f3a3f" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D_cars" tag="ViewCode">
-                      <elementDefinition Id="01db6bc5-6abf-4aad-aad6-f4885747d402" />
-                    </reference>
-                  </referencesInternal>
-                  <appliedStereotypesInternal>
-                    <stereotypeInstance Id="28b3d4ab-89b9-4f89-8841-15e9e14e16a1" name="field" profile="CSharpProfile">
-                      <elementDefinition Id="c95dc67e-9275-409e-b8f9-94e75331d633" />
-                      <propertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="9b5742e4-20a1-43a9-9d00-31e875fe79f6">
-                          <propertyInstance Id="5405f825-06da-4dcb-bb5e-1e6d56b35cdc" name="ClrAttributes">
-                            <elementDefinition Id="ab8c689b-acbf-4a4c-82b3-3d46a5e85519" />
-                          </propertyInstance>
-                          <elementDefinition Id="958bf18f-9a20-4293-800c-222540f10b34" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="565e1897-c555-438e-ac2a-e917c7a25142">
-                          <propertyInstance Id="bbf8748f-00fb-4998-b27d-07922631d54a" name="IsConst" value="false">
-                            <elementDefinition Id="06c5f78f-ecab-4e72-86ec-b968b902bce3" />
-                          </propertyInstance>
-                          <elementDefinition Id="3f0547e7-10ad-4107-9213-faad2892f7cb" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="1c67d833-2c97-4409-9f1a-d6d89bdd017e">
-                          <propertyInstance Id="70316084-5438-4214-8543-ed438298b4d6" name="IsNullable" value="false">
-                            <elementDefinition Id="7045cd49-3ca8-4cdb-8698-2e14dc7de5f0" />
-                          </propertyInstance>
-                          <elementDefinition Id="3b75578e-0f4f-4d6a-bedc-ddb24371866d" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="ece922c7-76ee-44c9-9b1d-8aadc4450366">
-                          <propertyInstance Id="892cdde1-6e15-44b9-857e-593cc8d79a5c" name="IsVolatile" value="false">
-                            <elementDefinition Id="203f19f3-8818-4e6b-a604-2d3927f53aea" />
-                          </propertyInstance>
-                          <elementDefinition Id="d69915d2-e9a7-48b4-b48d-4e6aacb026df" />
-                        </stereotypeInstanceHasPropertyInstances>
-                        <stereotypeInstanceHasPropertyInstances Id="d1683413-095b-403a-a889-22885aa45dd8">
-                          <propertyInstance Id="dad429c6-d899-4e77-89af-41042d6111be" name="PackageVisibility" value="internal">
-                            <elementDefinition Id="2f91b9de-ed74-4a6a-8a38-1164fd5d2bef" />
-                          </propertyInstance>
-                          <elementDefinition Id="37380df5-2454-4988-9ee9-961678dd1a98" />
-                        </stereotypeInstanceHasPropertyInstances>
-                      </propertyInstances>
-                    </stereotypeInstance>
-                  </appliedStereotypesInternal>
-                  <elementDefinition Id="1e9f179c-72ce-43b2-8bd9-db413e9d3610" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="2f11b6a3-4bfd-4234-99f4-4e17f9132581" LastKnownName="List&lt;PassengerCar‎&gt;" />
                   </type_NamedElement>
                 </property>
               </ownedAttributesInternal>
@@ -2739,6 +2706,16 @@
                     </stereotypeInstance>
                   </appliedStereotypesInternal>
                   <elementDefinition Id="548df09e-84b3-43c6-9635-70572ce9699c" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="7443c774-cf7a-497e-a62f-4df60e5438cf" direction="Return">
+                        <elementDefinition Id="e94f1a11-3a3b-4a33-8181-d71e03a5bde7" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c4fb028d-63d7-499d-b118-47a3d8b166f4" LastKnownName="IEnumerable&lt;PassengerCar‎&gt;" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
                 </operation>
                 <operation Id="27e68327-ab7e-4e82-ba99-336271851348" name="RemoveAllCars" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <referencesInternal>
@@ -3164,6 +3141,12 @@
                 </stereotypeInstance>
               </appliedStereotypesInternal>
               <elementDefinition Id="e963112d-7b0f-4473-a9ea-a2552237b425" />
+              <suppliersInternal>
+                <dependency Id="4bbdc619-76b5-41e7-8d9c-5906ebfebf01">
+                  <classMoniker Id="4b27f526-67de-48bc-80c3-da41d390115c" LastKnownName="PassengerTrain" />
+                  <elementDefinition Id="1188b70d-5454-4f11-88b6-eefca182a272" />
+                </dependency>
+              </suppliersInternal>
               <ownedOperationsInternal>
                 <operation Id="2c302b95-4cd4-4920-8504-b1b96d564eb1" name="Main" isLeaf="true" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <appliedStereotypesInternal>
@@ -3214,9 +3197,6 @@
                     <operationHasOwnedParameters>
                       <parameter Id="81bd8496-f47d-4f7d-983d-5350f3830c53" direction="Return" isUnique="false">
                         <elementDefinition Id="84c1fe30-ec52-4cee-be4f-3c283fafb457" />
-                        <type_NamedElement>
-                          <referencedTypeMoniker Id="68cbfc10-5ed3-4807-9d0e-d44904dd0729" LastKnownName="void" />
-                        </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
@@ -3248,11 +3228,6 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="ebd7c644-87c0-43fb-8fbf-a4d12c5321a0" name="Car" isAbstract="false" isLeaf="false" cachedFullName="ModelProj::RailTransport::Car">
-        <elementDefinition Id="f9a899ef-b387-441f-bf91-44526ed5f744" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <referencedType Id="b6e62bdc-ac93-46ae-8970-eaf5ee1f7102" name="Ticket" isAbstract="false" isLeaf="false" cachedFullName="ModelProj::RailTransport::Ticket">
         <elementDefinition Id="ce17696d-2c26-473a-8f92-0d8025ae88dc" />
       </referencedType>
@@ -3273,11 +3248,6 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="68cbfc10-5ed3-4807-9d0e-d44904dd0729" name="void" isAbstract="false" isLeaf="false" cachedFullName="void">
-        <elementDefinition Id="643ad652-1e30-4fa7-b76a-900b11736e30" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <referencedType Id="c60844c6-302e-460c-a6a6-550710f7e15c" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
         <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
       </referencedType>
@@ -3288,22 +3258,22 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="a2fc3081-0bbd-46c3-9e26-68fb72dcbca9" name="IEnumerable&lt;PassengerCar‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="ModelProj::System::Collections::Generic::IEnumerable&lt;PassengerCar‎&gt;">
+      <referencedType Id="c4fb028d-63d7-499d-b118-47a3d8b166f4" name="IEnumerable&lt;PassengerCar‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="ModelProj::System::Collections::Generic::IEnumerable&lt;PassengerCar‎&gt;">
         <elementDefinition Id="a8598c05-5a25-48ab-9441-20f143ff54b7" />
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="1f6d8f56-2d50-478f-9e08-87a044e15c62" name="List&lt;Passenger‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="ModelProj::System::Collections::Generic::List&lt;Passenger‎&gt;">
-        <elementDefinition Id="b6f5fd55-4707-420b-ad64-badbf031d01f" />
+      <referencedType Id="c774032c-5681-466f-aa5f-de47cfde637e" name="IEnumerable&lt;PassengerCar‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="ModelProj::System::Collections::Generic::IEnumerable&lt;PassengerCar‎&gt;">
+        <elementDefinition Id="a8598c05-5a25-48ab-9441-20f143ff54b7" />
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="2f11b6a3-4bfd-4234-99f4-4e17f9132581" name="List&lt;PassengerCar‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="ModelProj::System::Collections::Generic::List&lt;PassengerCar‎&gt;">
-        <elementDefinition Id="f2589fb0-857e-4ca8-aaff-0ee8d3c56a6b" />
+      <referencedType Id="785f755f-00b6-4988-a80a-369a9be113b9" name="IEnumerable" isAbstract="false" isLeaf="false" cachedFullName="ModelProj::System::Collections::Generic::IEnumerable">
+        <elementDefinition Id="caa28e9d-2c1b-4696-97a8-1aa66bde484e" />
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="72cb613f-294f-4681-9d8b-bcd82df9ff7e" name="T‎[]" isAbstract="false" isLeaf="false" cachedFullName="ModelProj::T‎[]">
+      <referencedType Id="7e835b03-b612-44d5-8798-6e914d783ed7" name="T‎[]" isAbstract="false" isLeaf="false" cachedFullName="ModelProj::RailTransport::T‎[]">
         <elementDefinition Id="13c1726f-3656-466e-b35e-398fbf49adf8" />
       </referencedType>
     </packageHasNamedElement>

@@ -130,65 +130,6 @@
         LastKnownName="System"
         LastKnownLocation="Package_2244.uml" />
     </packageHasNamedElement>
-    <packageHasNamedElement>
-      <class
-        Id="13c1726f-3656-466e-b35e-398fbf49adf8"
-        name="T‎[]"
-        visibility="Private"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false">
-        <referencesInternal>
-          <reference
-            Id="cd17f921-0f87-4a35-82c1-fb28d41c7f6e"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(ArrayRank%3D1 ParentType%3D(Type%3D(Name%3DTrain GenericParameterCount%3D1) ParameterIdentifier%3D0))"
-            tag="ViewCode" />
-        </referencesInternal>
-        <appliedStereotypesInternal>
-          <stereotypeInstance
-            Id="3e21adc1-7d8b-41f9-8a63-b60e9373f524"
-            name="class"
-            profile="CSharpProfile">
-            <propertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="ce3c4322-724e-416c-8f35-a56c443f1725">
-                <propertyInstance
-                  Id="9d00961a-1dd8-4c58-9646-81f5881329b9"
-                  name="ClrAttributes" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="fab82720-4ea2-4f3b-9d59-7ee2853c803f">
-                <propertyInstance
-                  Id="9a7941c9-4e50-48d8-ad16-f9be65652e00"
-                  name="IsPartial"
-                  value="false" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="87bbe595-7a56-4645-8810-c99460897bb9">
-                <propertyInstance
-                  Id="68e00ae6-92c3-485d-99a5-6af3cde999d0"
-                  name="IsStatic"
-                  value="False" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="fab7f2d8-0987-46f8-b905-ff64c25be318">
-                <propertyInstance
-                  Id="0384e03b-4b1c-400c-b8ec-fc1a25f7c3ed"
-                  name="IsUnsafe"
-                  value="false" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="aa0ab2e2-7aec-4d8c-82cf-069e96f1f1ee">
-                <propertyInstance
-                  Id="5678a902-cfbf-4ad8-9826-977044719c6e"
-                  name="PackageVisibility"
-                  value="internal" />
-              </stereotypeInstanceHasPropertyInstances>
-            </propertyInstances>
-          </stereotypeInstance>
-        </appliedStereotypesInternal>
-      </class>
-    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"

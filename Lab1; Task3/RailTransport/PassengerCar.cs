@@ -12,7 +12,10 @@ namespace RailTransport
 	using System.Text;
 
 	public class PassengerCar : Car, IComparable<PassengerCar>
-	{
+    {
+        private IList<Passenger> _passengers;
+
+        #region properties
         public virtual int CountBaggage
         {
             get { return this._passengers.Count(x => x.HasBaggage); }
@@ -38,14 +41,12 @@ namespace RailTransport
         {
             get { return CountPassengers; }
         }
-
         public virtual TypeCar Type
         {
             get;
             protected set;
         }
-
-        private List<Passenger> _passengers=null;
+        #endregion
 
         public PassengerCar(int number, TypeCar type)
         {
@@ -58,28 +59,28 @@ namespace RailTransport
                     CountSeats = 54;
                     break;
                 case TypeCar.Kupe:
-                    CountSeats = 54;
+                    CountSeats = 36;
                     break;
                 case TypeCar.SpalnyVagon:
-                    CountSeats = 54;
+                    CountSeats = 18;
                     break;
             }
         }
 
         public virtual void AddPassenger(Passenger pass)
         {
-                this._passengers.Add(pass);
+            this._passengers.Add(pass);
         }
 
-		public virtual void RemovePassenger(Passenger pass)
-		{
+        public virtual void RemovePassenger(Passenger pass)
+        {
             this._passengers.Remove(pass);
-		}
+        }
 
-		public virtual void RemoveAllPassengers()
-		{
+        public virtual void RemoveAllPassengers()
+        {
             this._passengers.Clear();
-		}
+        }
 
         public int CompareTo(PassengerCar other)
         {
@@ -91,6 +92,6 @@ namespace RailTransport
             return string.Format("Car №{0}\n Type: {1}\n CountFreeSeats: {2}\n CountSeats: {3}",
                 Number, Type, CountFreeSeats, CountSeats);
         }
-    }
+	}
 }
 

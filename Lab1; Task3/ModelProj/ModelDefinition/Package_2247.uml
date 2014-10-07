@@ -69,13 +69,6 @@
         </appliedStereotypesInternal>
         <suppliersInternal>
           <interfaceRealization
-            Id="5ed6f440-44da-4698-83f3-9d875a9eb701">
-            <interfaceMoniker
-              Id="9aed59e5-429d-4f15-9f07-932faeacc67b"
-              LastKnownName="IComparable&lt;Car‎&gt;"
-              LastKnownLocation="Package_2244.uml" />
-          </interfaceRealization>
-          <interfaceRealization
             Id="e00c02bc-add2-4859-9d90-f0c0c54541fa">
             <interfaceMoniker
               Id="15e66048-c78c-4afd-9e73-abe0742ba0da"
@@ -178,7 +171,6 @@
       <class
         Id="8fb42499-fed8-4aa2-b12a-2f8a76dd5a9f"
         name="PassengerCar"
-        visibility="Private"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -312,6 +304,102 @@
                       Id="acc0c48f-ed48-4160-a807-2d3d00e2bdfc"
                       name="Upper"
                       value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="53e68af9-88df-4170-911b-4788a8dd7e25"
+            isDerived="false"
+            sourceEndRoleName="PassengerCar"
+            targetEndRoleName="Passenger"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="5b127bdf-c1d1-4093-a8ca-4487e34e781f"
+              LastKnownName="Passenger"
+              LastKnownLocation="Package_2247.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d64a6ce5-fc2e-4a04-ac59-398869397133"
+                  name="PassengerCar"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="300b19b2-63c0-44ee-880d-37a729ff9f3c"
+                  name="Passenger"
+                  visibility="Private"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance
+                      Id="b922f437-2cd9-4b76-9038-c227a76543cc"
+                      name="field"
+                      profile="CSharpProfile">
+                      <propertyInstances>
+                        <stereotypeInstanceHasPropertyInstances
+                          Id="e762fa5d-6861-495f-8ca0-7dc2551bfd34">
+                          <propertyInstance
+                            Id="ba8384de-0976-4249-a25f-b912feb628d6"
+                            name="ClrAttributes" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances
+                          Id="495586cf-7c5b-4dff-8314-7442f3f9dc28">
+                          <propertyInstance
+                            Id="f6eb4fb4-7ef8-4c14-82a1-f5ab2448fa02"
+                            name="IsConst"
+                            value="false" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances
+                          Id="9f59ca69-5a0c-42c7-b501-ef241e98f005">
+                          <propertyInstance
+                            Id="b7370125-3a2d-416b-b65f-113266c7927d"
+                            name="IsNullable"
+                            value="false" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances
+                          Id="f315453a-3cd5-4dec-9a1f-2198493a3e4c">
+                          <propertyInstance
+                            Id="4c7ad4cd-3865-4225-8d9b-b2b8ce781f01"
+                            name="IsVolatile"
+                            value="false" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances
+                          Id="5f9f9679-c934-4380-8267-8e1ab7ba85e0">
+                          <propertyInstance
+                            Id="84b50a5b-d66b-4a0e-8d77-7daf7c6c83e6"
+                            name="PackageVisibility"
+                            value="internal" />
+                        </stereotypeInstanceHasPropertyInstances>
+                      </propertyInstances>
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="4c5b8343-f6a5-4a46-b885-7e34a9ed3534"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ce4274f1-2dbb-4352-afc5-8d01d8695de4"
+                      name="Upper"
+                      value="*" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -800,74 +888,6 @@
                 LastKnownLocation="Package_2247.uml" />
             </type_NamedElement>
           </property>
-          <property
-            Id="33f5f7ad-4741-4e14-89c8-d78e96061649"
-            name="_passengers"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <referencesInternal>
-              <reference
-                Id="900b638d-bcb9-4c91-a01c-61d6229e433d"
-                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerCar Member%3D_passengers"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="a08b8fc6-f321-46ef-9cbc-4db5eef45e2a"
-                name="field"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="d08d6655-a334-4efe-985d-7cea15b4a3b3">
-                    <propertyInstance
-                      Id="045a3900-b1ce-4881-b0a4-add71899c2bd"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="c58985ce-7321-4bcd-b90e-5444723883ed">
-                    <propertyInstance
-                      Id="9d1b6dda-6866-46fa-8a6c-af9ead614c45"
-                      name="IsConst"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="b89e7065-0cf4-4741-81ec-9157dbc5c49e">
-                    <propertyInstance
-                      Id="5c9d2904-e423-451f-aa9e-e32e60a2d49d"
-                      name="IsNullable"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="2365fbb0-a94f-49d5-8e9b-119cfc432711">
-                    <propertyInstance
-                      Id="31a924df-c8c7-4870-977b-fde60299c933"
-                      name="IsVolatile"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="fefd494b-9e9a-45b8-9a6d-50a3adb8e62d">
-                    <propertyInstance
-                      Id="c00e0e9e-5bff-474a-b420-f21c27b99641"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <type_NamedElement>
-              <classMoniker
-                Id="b6f5fd55-4707-420b-ad64-badbf031d01f"
-                LastKnownName="List&lt;Passenger‎&gt;"
-                LastKnownLocation="Package2_2244.uml" />
-            </type_NamedElement>
-          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -1044,14 +1064,7 @@
                 <parameter
                   Id="9bf56a0c-c50e-46de-b4f9-9250b0fda572"
                   direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="643ad652-1e30-4fa7-b76a-900b11736e30"
-                      LastKnownName="void"
-                      LastKnownLocation="Package_2247.uml" />
-                  </type_NamedElement>
-                </parameter>
+                  isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
@@ -1144,14 +1157,7 @@
                 <parameter
                   Id="5cbf560d-1bbe-473c-91cb-f741a2bf2859"
                   direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="643ad652-1e30-4fa7-b76a-900b11736e30"
-                      LastKnownName="void"
-                      LastKnownLocation="Package_2247.uml" />
-                  </type_NamedElement>
-                </parameter>
+                  isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
@@ -1244,14 +1250,7 @@
                 <parameter
                   Id="69e72dca-9cf4-4739-ac32-f3a8beb19b55"
                   direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="643ad652-1e30-4fa7-b76a-900b11736e30"
-                      LastKnownName="void"
-                      LastKnownLocation="Package_2247.uml" />
-                  </type_NamedElement>
-                </parameter>
+                  isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
@@ -1450,11 +1449,6 @@
       </enumeration>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <undefinedType
-        Id="643ad652-1e30-4fa7-b76a-900b11736e30"
-        name="void" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <class
         Id="82572a68-ca57-431a-b897-7e40d2404126"
         name="Train"
@@ -1587,7 +1581,7 @@
             name="Length"
             isLeaf="false"
             isStatic="false"
-            isReadOnly="true"
+            isReadOnly="false"
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
@@ -1650,7 +1644,7 @@
                     <propertyInstance
                       Id="238a0488-ed27-4638-baf0-b56bfe1f1fc4"
                       name="Set"
-                      value="none" />
+                      value="private" />
                   </stereotypeInstanceHasPropertyInstances>
                 </propertyInstances>
               </stereotypeInstance>
@@ -1730,7 +1724,7 @@
                     <propertyInstance
                       Id="a744b0f3-86fa-408e-bd5f-85c71ed4fc5c"
                       name="Set"
-                      value="public" />
+                      value="protected" />
                   </stereotypeInstanceHasPropertyInstances>
                 </propertyInstances>
               </stereotypeInstance>
@@ -1808,6 +1802,20 @@
                 </propertyInstances>
               </stereotypeInstance>
             </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="01f24858-6c36-489c-b369-20671a8aa88a"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="caa28e9d-2c1b-4696-97a8-1aa66bde484e"
+                      LastKnownName="IEnumerable"
+                      LastKnownLocation="Package2_2244.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
           <operation
             Id="288e31ec-0f37-4c5c-9084-b176f94a56c9"
@@ -2027,33 +2035,15 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="ba8c5113-2a31-4de0-8b8b-9b9fde475ae4"
+                  Id="32c63957-6426-4906-948f-42abdf7de3a0"
                   name="cars"
                   direction="In"
-                  isOrdered="true">
-                  <referencesInternal>
-                    <reference
-                      Id="c13e26e8-2f4d-4c38-8ec6-9e9aaaa402b9"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) Member%3D(Name%3DAddCars OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(ArrayRank%3D1 ParentType%3D(Type%3D(Name%3DTrain GenericParameterCount%3D1) ParameterIdentifier%3D0)))]) ParameterIdentifier%3Dcars"
-                      tag="ViewCode" />
-                  </referencesInternal>
-                  <lowerValueInternal>
-                    <literalString
-                      Id="58fe293f-3050-4280-b20d-28c4af0772d4"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="7accbb4e-6d95-4d25-8f6b-a6958fe72d27"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
+                  isUnique="false">
                   <type_NamedElement>
                     <classMoniker
                       Id="13c1726f-3656-466e-b35e-398fbf49adf8"
                       LastKnownName="T‎[]"
-                      LastKnownLocation="ModelProj.uml" />
+                      LastKnownLocation="Package_2247.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2144,71 +2134,6 @@
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
-          </operation>
-          <operation
-            Id="f8674e35-c8c1-4dd8-86f7-23b715dec515"
-            name="Train"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <referencesInternal>
-              <reference
-                Id="ee6c55de-75aa-4e13-8033-4f3f44a5fe35"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(Name%3DTrain GenericParameterCount%3D1) Member%3D.ctor"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="b5b1b763-dc31-4138-9891-9a66fb0a294e"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="e3eaaef9-42ad-4dcb-8001-7a96348828b3">
-                    <propertyInstance
-                      Id="089b1969-8ca0-489e-acf7-56fd1d3a3906"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="f9ef273e-e6d3-41d4-8593-b76bdccf50d1">
-                    <propertyInstance
-                      Id="6e591308-debb-471c-b871-a338999bb44a"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="16100227-bdd3-4e9f-b564-915a6ddcefbe">
-                    <propertyInstance
-                      Id="0800eea8-58f3-4274-b2b1-7ae2b15f53d9"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="fbe0231e-d498-4a5d-989e-5b7a795c51fa">
-                    <propertyInstance
-                      Id="5a81a890-3bfd-4897-91be-fea145fcb09b"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="14501eb5-076b-47af-be3c-437840d4c4d3">
-                    <propertyInstance
-                      Id="3eeadbbe-787f-411f-97fb-f741b292366b"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="199876f9-9a97-4f14-aec9-948d8b96ac0b">
-                    <propertyInstance
-                      Id="790236a3-20fd-49af-a407-4b54f1202272"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -3076,6 +3001,104 @@
               LastKnownLocation="Package_2247.uml" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association
+            Id="49d66c03-7a8a-4bb1-a18b-882dd695efda"
+            isDerived="false"
+            sourceEndRoleName="PassengerTrain"
+            targetEndRoleName="PassengerCar"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="8fb42499-fed8-4aa2-b12a-2f8a76dd5a9f"
+              LastKnownName="PassengerCar"
+              LastKnownLocation="Package_2247.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1a562803-53b5-469e-873e-e815c9e05c78"
+                  name="PassengerTrain"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="da008bec-b759-4b7c-847f-98c6b53a33cf"
+                  name="PassengerCar"
+                  visibility="Private"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true">
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance
+                      Id="eb524e7c-68a2-4d42-9c26-75f937069abc"
+                      name="field"
+                      profile="CSharpProfile">
+                      <propertyInstances>
+                        <stereotypeInstanceHasPropertyInstances
+                          Id="a1c3e3f1-38d0-44e9-8a9f-4ab00d3d69a8">
+                          <propertyInstance
+                            Id="2ecda4fe-4c3b-4b65-bca7-edd4f89cf079"
+                            name="ClrAttributes" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances
+                          Id="8661935b-7656-4e99-ab0a-625d01fd2cb7">
+                          <propertyInstance
+                            Id="da2dd514-6cb8-45c8-baf4-2f1c2d0f2efe"
+                            name="IsConst"
+                            value="false" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances
+                          Id="b028cf81-24cb-487f-8dd6-31c75a1ddc43">
+                          <propertyInstance
+                            Id="c7e50bd8-d8e0-4a6e-8c3c-14cac8d3e97f"
+                            name="IsNullable"
+                            value="false" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances
+                          Id="341af60a-a85b-4e5b-9be5-000314b627e5">
+                          <propertyInstance
+                            Id="66c9a6e8-fb44-4344-b2c6-285536f4b46f"
+                            name="IsVolatile"
+                            value="false" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances
+                          Id="d284a813-a7c2-4a85-93c9-e031f8c6216f">
+                          <propertyInstance
+                            Id="3c3b2575-4e45-473b-9734-c40adb299f1e"
+                            name="PackageVisibility"
+                            value="internal" />
+                        </stereotypeInstanceHasPropertyInstances>
+                      </propertyInstances>
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="dd6d6035-7141-4ee7-bd16-6a58fe495e07"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="f873c567-edbd-41ee-a8f9-ad1efb4c9bdd"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="814a9630-5f74-439d-99c7-2f1a5df0ce27"
@@ -3155,74 +3178,6 @@
                 Id="220a3521-e091-4221-bae9-3ef9018e845c"
                 LastKnownName="Integer"
                 LastKnownLocation="ModelProj.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="1e9f179c-72ce-43b2-8bd9-db413e9d3610"
-            name="_cars"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <referencesInternal>
-              <reference
-                Id="01db6bc5-6abf-4aad-aad6-f4885747d402"
-                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3DPassengerTrain Member%3D_cars"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="c95dc67e-9275-409e-b8f9-94e75331d633"
-                name="field"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="958bf18f-9a20-4293-800c-222540f10b34">
-                    <propertyInstance
-                      Id="ab8c689b-acbf-4a4c-82b3-3d46a5e85519"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="3f0547e7-10ad-4107-9213-faad2892f7cb">
-                    <propertyInstance
-                      Id="06c5f78f-ecab-4e72-86ec-b968b902bce3"
-                      name="IsConst"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="3b75578e-0f4f-4d6a-bedc-ddb24371866d">
-                    <propertyInstance
-                      Id="7045cd49-3ca8-4cdb-8698-2e14dc7de5f0"
-                      name="IsNullable"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="d69915d2-e9a7-48b4-b48d-4e6aacb026df">
-                    <propertyInstance
-                      Id="203f19f3-8818-4e6b-a604-2d3927f53aea"
-                      name="IsVolatile"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="37380df5-2454-4988-9ee9-961678dd1a98">
-                    <propertyInstance
-                      Id="2f91b9de-ed74-4a6a-8a38-1164fd5d2bef"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <type_NamedElement>
-              <classMoniker
-                Id="f2589fb0-857e-4ca8-aaff-0ee8d3c56a6b"
-                LastKnownName="List&lt;PassengerCar‎&gt;"
-                LastKnownLocation="Package2_2244.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -3580,6 +3535,20 @@
                 </propertyInstances>
               </stereotypeInstance>
             </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e94f1a11-3a3b-4a33-8181-d71e03a5bde7"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="a8598c05-5a25-48ab-9441-20f143ff54b7"
+                      LastKnownName="IEnumerable&lt;PassengerCar‎&gt;"
+                      LastKnownLocation="Package2_2244.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
           <operation
             Id="06c2cebb-cd8e-4e58-b565-d23573720397"
@@ -4157,11 +4126,6 @@
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <undefinedType
-        Id="8f593632-ce62-4bf1-8ea6-34e72ed4dfd9"
-        name="ModelProj::System::Collections::Generic::List&lt;PassengerCar&gt;" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <class
         Id="e963112d-7b0f-4473-a9ea-a2552237b425"
         name="Client"
@@ -4211,6 +4175,15 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="1188b70d-5454-4f11-88b6-eefca182a272">
+            <classMoniker
+              Id="d9f68e13-8b65-4ac5-b8ad-b96c80ab11e2"
+              LastKnownName="PassengerTrain"
+              LastKnownLocation="Package_2247.uml" />
+          </dependency>
+        </suppliersInternal>
         <ownedOperationsInternal>
           <operation
             Id="0711cd41-75ea-42a6-a719-bb9978692087"
@@ -4275,18 +4248,70 @@
                 <parameter
                   Id="84c1fe30-ec52-4cee-be4f-3c283fafb457"
                   direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="643ad652-1e30-4fa7-b76a-900b11736e30"
-                      LastKnownName="void"
-                      LastKnownLocation="Package_2247.uml" />
-                  </type_NamedElement>
-                </parameter>
+                  isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
         </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="13c1726f-3656-466e-b35e-398fbf49adf8"
+        name="T‎[]"
+        visibility="Private"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="cd17f921-0f87-4a35-82c1-fb28d41c7f6e"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FDimi%2FSource%2FRepos%2FEPAMLabs%2FLab1%3B Task3%2FRailTransport%2Fbin%2FDebug%2FRailTransport.exe&quot; Namespace%3DRailTransport Type%3D(ArrayRank%3D1 ParentType%3D(Type%3D(Name%3DTrain GenericParameterCount%3D1) ParameterIdentifier%3D0))"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="3e21adc1-7d8b-41f9-8a63-b60e9373f524"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ce3c4322-724e-416c-8f35-a56c443f1725">
+                <propertyInstance
+                  Id="9d00961a-1dd8-4c58-9646-81f5881329b9"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fab82720-4ea2-4f3b-9d59-7ee2853c803f">
+                <propertyInstance
+                  Id="9a7941c9-4e50-48d8-ad16-f9be65652e00"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="87bbe595-7a56-4645-8810-c99460897bb9">
+                <propertyInstance
+                  Id="68e00ae6-92c3-485d-99a5-6af3cde999d0"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fab7f2d8-0987-46f8-b905-ff64c25be318">
+                <propertyInstance
+                  Id="0384e03b-4b1c-400c-b8ec-fc1a25f7c3ed"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="aa0ab2e2-7aec-4d8c-82cf-069e96f1f1ee">
+                <propertyInstance
+                  Id="5678a902-cfbf-4ad8-9826-977044719c6e"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
       </class>
     </packageHasNamedElement>
   </packagedElements>

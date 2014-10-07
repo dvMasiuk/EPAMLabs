@@ -18,6 +18,7 @@ namespace RailTransport
             int numTrain=64;
             try
             {
+                #region data
                 PassengerTrain train = new PassengerTrain(numTrain);
                 train.AddCars(
                 new PassengerCar[]{
@@ -26,10 +27,7 @@ namespace RailTransport
                 new PassengerCar(3,TypeCar.Kupe),
                 new PassengerCar(4,TypeCar.Kupe),
                 new PassengerCar(5,TypeCar.SpalnyVagon),
-                new PassengerCar(6,TypeCar.Platskartny),
-                new PassengerCar(7,TypeCar.Platskartny),
-                new PassengerCar(8,TypeCar.Kupe),
-                new PassengerCar(9,TypeCar.Platskartny)});
+                new PassengerCar(6,TypeCar.Platskartny)});
                 train.AddPassengers(
                     new Passenger[]{
                     new Passenger("Vasya"){Ticket=new Ticket(numTrain,1)},
@@ -41,15 +39,23 @@ namespace RailTransport
                     new Passenger("Vasya"){Ticket=new Ticket(numTrain,3)},
                     new Passenger("Vasya"){Ticket=new Ticket(numTrain,4)},
                     new Passenger("Vasya"){Ticket=new Ticket(numTrain,5)},
-                    new Passenger("Vasya"){Ticket=new Ticket(numTrain,8)},
+                    new Passenger("Katya"){Ticket=new Ticket(numTrain,5)},
+                    new Passenger("Elena"){Ticket=new Ticket(numTrain,5),HasBaggage=true},
+                    new Passenger("Olga"){Ticket=new Ticket(numTrain,6)},
                     });
-                Console.WriteLine("Initial Train: {0}", train.ToString());
-                train.Sort();
-                Console.WriteLine("Sorted Train: {0}", train.ToString());
-                Console.WriteLine("Count Passenger And Baggage: {0}", train.CountPassAndBaggage());
+                #endregion
+
+                Console.WriteLine(train.ToString());
+                Console.WriteLine("\nSorted Train №{0}", train.Number);
+                foreach (var car in train.Sort())
+                {
+                    Console.WriteLine(car.ToString());
+                }
+                Console.WriteLine("\nCount Passenger And Baggage: {0}\n", train.CountPassAndBaggage());
+                Console.WriteLine("Find Cars:");
                 foreach (var car in train.Find(3, 5))
                 {
-                    Console.WriteLine("Find Cars: {0}", car.ToString());
+                    Console.WriteLine(car.ToString());
                 }
                 Console.ReadKey();
             }
