@@ -33,6 +33,7 @@ namespace RailTransport
 
 		public Passenger(string name)
 		{
+            this.Name = name;6
 		}
 
 	}

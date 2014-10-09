@@ -25,7 +25,7 @@ namespace RailTransport
 			protected set;
 		}
 
-		public abstract IEnumerable<T> Sort();
+		public abstract void Sort();
 
 		public abstract void RemoveAllCars();
 

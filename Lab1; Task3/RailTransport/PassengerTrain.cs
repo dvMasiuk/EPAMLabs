@@ -29,7 +29,7 @@ namespace RailTransport
         {
             return
             this._passengerCars.Where(x =>
-            { return minPass <= x.CountTakenSeats && x.CountTakenSeats <= maxPass; });
+                minPass <= x.CountTakenSeats && x.CountTakenSeats <= maxPass);
         }
 
         public override void RemoveCar(PassengerCar car)
@@ -39,13 +39,13 @@ namespace RailTransport
 
         public PassengerTrain(int number)
         {
-            Number = number;
+            this.Number = number;
             this._passengerCars = new List<PassengerCar>();
         }
 
-        public override IEnumerable<PassengerCar> Sort()
+        public override void Sort()
         {
-            return this._passengerCars.OrderBy(x => x);
+            this._passengerCars = this._passengerCars.OrderBy(x => x).ToList();
         }
 
         public override void RemoveAllCars()
@@ -53,11 +53,15 @@ namespace RailTransport
             this._passengerCars.Clear();
         }
 
-        public virtual int CountPassAndBaggage()
+        public virtual int CountPassengers
         {
-            return this._passengerCars.Sum(x => x.CountBaggage + x.CountPassengers);
+            get { return this._passengerCars.Sum(x => x.CountPassengers); }
         }
 
+        public virtual int CountBaggage
+        {
+            get { return this._passengerCars.Sum(x => x.CountBaggage); }
+        }
 
         public override void AddCars(PassengerCar[] cars)
         {
@@ -85,13 +89,20 @@ namespace RailTransport
 
         public override string ToString()
         {
+            return String.Format("Train №{0}\n Length: {1}\n CountPassengers: {2}\n CountBaggage: {3}",
+                this.Number, this.Length, this.CountPassengers, this.CountBaggage);
+        }
+
+        public virtual string GetInfo(bool full)
+        {
             StringBuilder sb = new StringBuilder();
-            sb.AppendFormat("Train №{0}", this.Number);
-            foreach (var car in this._passengerCars)
-            {
-                sb.Append("\n");
-                sb.Append(car.ToString());
-            }
+            sb.Append(this.ToString());
+            if (full)
+                foreach (var car in this._passengerCars)
+                {
+                    sb.Append("\n");
+                    sb.Append(car.ToString());
+                }
             return sb.ToString();
         }
     }

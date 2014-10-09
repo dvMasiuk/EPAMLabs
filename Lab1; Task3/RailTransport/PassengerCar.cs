@@ -89,8 +89,8 @@ namespace RailTransport
 
         public override string ToString()
         {
-            return string.Format("Car №{0}\n Type: {1}\n CountFreeSeats: {2}\n CountSeats: {3}",
-                Number, Type, CountFreeSeats, CountSeats);
+            return string.Format("Car №{0}\n Type: {1}\n CountPassengers: {2}\n CountBaggage: {3}\n CountFreeSeats: {4}\n CountSeats: {5}",
+                this.Number, this.Type, this.CountPassengers, this.CountBaggage,this.CountFreeSeats, this.CountSeats);
         }
 	}
 }
