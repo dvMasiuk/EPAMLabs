@@ -9,6 +9,7 @@ namespace Concordance
     public interface IBSTree<T> where T : IComparable<T>
     {
         void Insert(T item);
-        TreeNode<T> Find(T key);
+        TreeNode<T> Find(T item);
+        void Traverse(TreeNode<T> node, Action<T> callback);
     }
 }

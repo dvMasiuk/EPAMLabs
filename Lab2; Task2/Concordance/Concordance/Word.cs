@@ -10,7 +10,7 @@ namespace Concordance
     {
         public string Value { get; set; }
         public int Frequency { get; set; }
-        public List<int> ListPages { get; set; }
+        public IList<int> ListPages { get; set; }
 
         public int CompareTo(Word other)
         {
