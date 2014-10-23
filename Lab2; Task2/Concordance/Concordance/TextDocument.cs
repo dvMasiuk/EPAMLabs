@@ -10,77 +10,98 @@ namespace Concordance
 {
     public class TextDocument
     {
-        //private IList<TextPage> _pages;
+        private IList<TextPage> _pages;
         private BSTree<Word> _tree;
 
-        private int _linesOnPage;
-        public TextDocument(int linesOnPage)
+        public TextDocument()
         {
-            this._linesOnPage = linesOnPage;
+            this._pages = new List<TextPage>();
         }
 
-        public void ProcessFile(string filePath)
+        public void ReadFromFile(string filePath, int linesOnPage)
         {
-            string line;
             using (StreamReader sr = new StreamReader(filePath))
             {
-                int currLine = 0, currPage = 1;
-                this._tree = new BSTree<Word>();
-                while ((line = sr.ReadLine()) != null)
+                while (!sr.EndOfStream)
                 {
-                    currLine++;
-                    var res = Regex.Matches(line, "\\w+");
-                    foreach (Match item in res)
+                    TextPage page = new TextPage();
+                    for (int i = 0; i < linesOnPage; i++)
                     {
-                        Word word = new Word() { Value = item.Value.ToLower() };
-                        TreeNode<Word> node = this._tree.Find(word);
-                        if (node != null)
-                        {
-                            word = node.Data;
-                            if (word.ListPages.Last() < currPage)
-                                word.ListPages.Add(currPage);
-                        }
-                        else
-                        {
-                            word.ListPages = new List<int>() { currPage };
-                            this._tree.Insert(word);
-                        }
-                        word.Frequency++;
-
+                        string line = sr.ReadLine();
+                        if (line == null) break;
+                        page.AddLine(line);
                     }
-                    if (currLine == this._linesOnPage) { currPage++; currLine = 0; }
+                    this.AddPage(page);
                 }
-
             }
-            //this._pages = new List<TextPage>();
-            //int n = (int)Math.Ceiling((double)lines.Length / this._linesOnPage);// count pages
-
-            //int k = 0;
-            //for (int i = 0; i < n - 1; k = ++i * this._linesOnPage)
-            //{
-            //    this._pages.Add(new TextPage() { Number = i + 1, Text = string.Join(" ", lines, k, this._linesOnPage) });
-            //}
-            //this._pages.Add(new TextPage() { Number = n, Text = string.Join(" ", lines, k, lines.Length - k) });
-
         }
 
-        public void PrintConcordance(string filePath)
+        private void ProcessText(out int lengthLongestWord)
         {
-            if (this._tree != null)
+            this._tree = new BSTree<Word>();
+            lengthLongestWord = 0;
+            int pageNo = 0;
+            foreach (TextPage page in this._pages)
             {
-                using (StreamWriter sw = new StreamWriter(filePath))
+                pageNo++;
+                var res = Regex.Matches(page.GetText(TextOptions.Singleline), "\\w+");
+                foreach (Match item in res)
                 {
-                    char currGroup='\0';
-                    this._tree.Traverse(this._tree.Root,
-                        x =>
-                        {
-                            if (!currGroup.Equals(x.Value[0]))
-                                sw.WriteLine(char.ToUpper(currGroup = x.Value[0]));
-                            string line = string.Format("{0}{1}{2}: {3}", x.Value, new String('.', 20 - x.Value.Length), x.Frequency, string.Join(", ", x.ListPages));
-                            sw.WriteLine(line);
-                        });
+                    if (lengthLongestWord < item.Value.Length)
+                        lengthLongestWord = item.Value.Length;
+                    Word word = new Word() { Value = item.Value.ToLower() };
+                    TreeNode<Word> node = this._tree.Find(word);
+                    if (node != null)
+                    {
+                        word = node.Data;
+                        if (word.ListPages.Last() < pageNo)
+                            word.ListPages.Add(pageNo);
+                    }
+                    else
+                    {
+                        word.ListPages = new List<int>() { pageNo };
+                        this._tree.Insert(word);
+                    }
+                    word.Frequency++;
                 }
             }
+        }
+
+        public string GetConcordance()
+        {
+            int lengthLongestWord;
+            this.ProcessText(out lengthLongestWord);
+            char currGroup = '\0';
+            StringBuilder sb = new StringBuilder();
+            this._tree.Traverse(this._tree.Root,
+                x =>
+                {
+                    if (!currGroup.Equals(x.Value[0]))
+                        sb.AppendLine(char.ToUpper(currGroup = x.Value[0]).ToString());
+                    string line = string.Format("{0}{1}{2}: {3}", x.Value, new String('.',
+                        (lengthLongestWord + 5) - (x.Value.Length + ((int)Math.Log10(x.Frequency) + 1))),
+                        x.Frequency, string.Join(", ", x.ListPages));
+                    sb.AppendLine(line);
+                });
+            return sb.ToString();
+        }
+
+        public void AddPage(TextPage page)
+        {
+            this._pages.Add(page);
+        }
+
+        public void AddPages(IEnumerable<TextPage> pages)
+        {
+            foreach (var page in pages)
+            {
+                this.AddPage(page);
+            }
+        }
+
+        public void RemoveAllPages()
+        {
+            this._pages.Clear();
         }
     }
 }

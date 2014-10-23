@@ -11,10 +11,11 @@ namespace Concordance
     {
         static void Main(string[] args)
         {
-            string filePath = new FileInfo(@"..\..\doc.txt").FullName;
-            TextDocument doc = new TextDocument(2);
-            doc.ProcessFile(filePath);
-            doc.PrintConcordance(Path.Combine(Path.GetDirectoryName(filePath), "index.txt"));
+            string inputFilePath = new FileInfo(@"..\..\doc.txt").FullName;
+            string outputFilePath = Path.Combine(Path.GetDirectoryName(inputFilePath), "index.txt");
+            TextDocument doc = new TextDocument();
+            doc.ReadFromFile(inputFilePath, 14);
+            File.WriteAllText(outputFilePath, doc.GetConcordance());
         }
     }
 }
