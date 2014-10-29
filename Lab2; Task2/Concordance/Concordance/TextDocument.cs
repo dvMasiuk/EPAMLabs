@@ -44,7 +44,7 @@ namespace Concordance
             foreach (TextPage page in this._pages)
             {
                 pageNo++;
-                var res = Regex.Matches(page.GetText(TextOptions.Singleline), "\\w+");
+                var res = Regex.Matches(page.GetText(), "\\w+");
                 foreach (Match item in res)
                 {
                     if (lengthLongestWord < item.Value.Length)

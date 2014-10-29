@@ -15,19 +15,9 @@ namespace Concordance
             this._lines = new List<string>();
         }
 
-        public string GetText(TextOptions options)
+        public string GetText()
         {
-            string separator = "";
-            switch (options)
-            {
-                case TextOptions.Singleline:
-                    separator = " ";
-                    break;
-                case TextOptions.Multiline:
-                    separator = "\r\n";
-                    break;
-            }
-            return string.Join(separator, this._lines);
+            return string.Join(Environment.NewLine, this._lines);
         }
 
         public void AddLine(string line)
