@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ATS
 {
-    public class Port
+    public interface IProvider
     {
+        void SignContract(ContractForm form);
     }
 }

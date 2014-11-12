@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace ATS
 {
-    public class Provider
+    public class Provider : IProvider
     {
+        public void SignContract()
+        {
+        }
     }
 }
