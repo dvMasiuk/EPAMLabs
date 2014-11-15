@@ -8,13 +8,9 @@ namespace ATS
 {
     public class Terminal
     {
+        private Port _port;
+
         public int Id { get; set; }
-
-        [NotMapped]
-        public TelephoneNumber TelephoneNumber { get; set; }
-
-        [NotMapped]
-        public Port Port { get; set; }
 
         public void Display(string message)
         {
@@ -31,6 +27,24 @@ namespace ATS
         {
             //if (PortState == PortState.Calling)
             //    PortState = PortState.Connected;
+        }
+
+        public void Connect(Port port)
+        {
+            if (port != null)
+            {
+                this._port = port;
+                this._port.PortState = PortState.Connected;
+            }
+        }
+
+        public void Disconnect()
+        {
+            if (this._port != null)
+            {
+                this._port.PortState = PortState.Disconnected;
+                this._port = null;
+            }
         }
     }
 }

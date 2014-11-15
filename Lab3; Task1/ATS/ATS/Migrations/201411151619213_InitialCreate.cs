@@ -2,7 +2,7 @@ namespace ATS.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class InitialCreate : DbMigration
     {
         public override void Up()
@@ -20,7 +20,7 @@ namespace ATS.Migrations
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Subscribers", t => t.SubscriberId)
                 .Index(t => t.SubscriberId);
-            
+
             CreateTable(
                 "dbo.Subscribers",
                 c => new
@@ -31,12 +31,13 @@ namespace ATS.Migrations
                         ExpiryDateOfLoan = c.DateTime(nullable: false, storeType: "date"),
                         LoanAmount = c.Int(nullable: false),
                         TerminalId = c.Int(nullable: false),
+                        TelephoneNumberId = c.Int(nullable: false),
                         TariffPlanId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.TariffPlans", t => t.TariffPlanId)
                 .Index(t => t.TariffPlanId);
-            
+
             CreateTable(
                 "dbo.TariffPlans",
                 c => new
@@ -46,7 +47,7 @@ namespace ATS.Migrations
                         Cost = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
-            
+
             CreateTable(
                 "dbo.Ports",
                 c => new
@@ -56,17 +57,16 @@ namespace ATS.Migrations
                         Assigned = c.Boolean(nullable: false, defaultValue: false),
                     })
                 .PrimaryKey(t => t.Id);
-            
+
             CreateTable(
                 "dbo.TelephoneNumbers",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Number = c.String(nullable: false, maxLength: 8, fixedLength: true),
-                        Assigned = c.Boolean(nullable: false, defaultValue: false),
                     })
                 .PrimaryKey(t => t.Id);
-            
+
             CreateTable(
                 "dbo.Terminals",
                 c => new
@@ -74,9 +74,9 @@ namespace ATS.Migrations
                         Id = c.Int(nullable: false, identity: true),
                     })
                 .PrimaryKey(t => t.Id);
-            
+
         }
-        
+
         public override void Down()
         {
             DropForeignKey("dbo.Subscribers", "TariffPlanId", "dbo.TariffPlans");

@@ -11,5 +11,6 @@ namespace ATS
         Connected,
         Disconnected,
         Calling,
+        Ending
     }
 }

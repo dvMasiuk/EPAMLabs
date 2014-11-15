@@ -28,6 +28,8 @@ namespace ATS
 
         public int TerminalId { get; set; }
 
+        public int TelephoneNumberId { get; set; }
+
         public int TariffPlanId { get; set; }
 
         public virtual TariffPlan TariffPlan { get; set; }

@@ -33,6 +33,11 @@ namespace ATS
 #endif
             //bool freed = provider.FreeTerminal(terminal);
 
+            terminal.Connect(provider.GetPort());
+
+
+
+            terminal.Disconnect();
         }
 
         public static void XmlSerialize(object obj, string fileName)
