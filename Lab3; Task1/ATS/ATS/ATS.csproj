@@ -70,6 +70,11 @@
     <Compile Include="ATSEntitiesContext.cs" />
     <Compile Include="Call.cs" />
     <Compile Include="Contract.cs" />
+    <Compile Include="Migrations\201411150917047_InitialCreate.cs" />
+    <Compile Include="Migrations\201411150917047_InitialCreate.Designer.cs">
+      <DependentUpon>201411150917047_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Port.cs" />
     <Compile Include="PortState.cs" />
     <Compile Include="Program.cs" />
@@ -107,6 +112,11 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201411150917047_InitialCreate.resx">
+      <DependentUpon>201411150917047_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

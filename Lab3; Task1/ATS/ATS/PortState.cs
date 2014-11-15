@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ATS
 {
-    enum PortState
+    public enum PortState
     {
-        Disconnected,
         Connected,
-        Calling
+        Disconnected,
+        Calling,
     }
 }

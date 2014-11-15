@@ -1,6 +1,15 @@
 <?xml version="1.0"?>
-<Contract xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Terminal xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Id>3</Id>
-  <TerminalId>5</TerminalId>
-  <TariffPlanId>1</TariffPlanId>
-</Contract>
+  <TelephoneNumber>
+    <Id>1</Id>
+    <Number>12-23-45</Number>
+    <Assigned>true</Assigned>
+  </TelephoneNumber>
+  <Port>
+    <Id>1</Id>
+    <Number>1010</Number>
+    <Assigned>true</Assigned>
+    <PortState>Connected</PortState>
+  </Port>
+</Terminal>

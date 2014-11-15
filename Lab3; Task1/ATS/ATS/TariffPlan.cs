@@ -1,12 +1,12 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.Spatial;
+
 namespace ATS
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
-
-    public partial class TariffPlan
+    public class TariffPlan
     {
         public int Id { get; set; }
 
@@ -15,5 +15,7 @@ namespace ATS
         public string Name { get; set; }
 
         public int Cost { get; set; }
+
+        public virtual ICollection<Subscriber> Subscribers { get; set; }
     }
 }

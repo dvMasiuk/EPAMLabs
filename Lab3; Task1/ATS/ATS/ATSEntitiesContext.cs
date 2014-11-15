@@ -1,11 +1,12 @@
+using System;
+using System.Data.Entity;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+
 namespace ATS
 {
-    using System;
-    using System.Data.Entity;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
 
-    public partial class ATSEntitiesContext : DbContext
+    public class ATSEntitiesContext : DbContext
     {
         public ATSEntitiesContext()
             : base("name=ATSEntitiesContext")
@@ -13,7 +14,6 @@ namespace ATS
         }
 
         public virtual DbSet<Call> Calls { get; set; }
-        public virtual DbSet<Contract> Contracts { get; set; }
         public virtual DbSet<Port> Ports { get; set; }
         public virtual DbSet<Subscriber> Subscribers { get; set; }
         public virtual DbSet<TariffPlan> TariffPlans { get; set; }
@@ -29,6 +29,11 @@ namespace ATS
             modelBuilder.Entity<Subscriber>()
                 .HasMany(e => e.Calls)
                 .WithRequired(e => e.Subscriber)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<TariffPlan>()
+                .HasMany(e => e.Subscribers)
+                .WithRequired(e => e.TariffPlan)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<TariffPlan>()

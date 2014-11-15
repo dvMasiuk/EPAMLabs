@@ -8,61 +8,79 @@ namespace ATS
 {
     public class Provider
     {
-        public Contract SignContract()
+        public Terminal SignContract(Contract contract)
         {
-            Contract contract = null;
+            Terminal terminal = null;
             using (var context = new ATSEntitiesContext())
             {
-                var port = context.Ports.FirstOrDefault(x => !x.Assigned);
-                if (port != null)
+                var telNumber = context.TelephoneNumbers.Attach(contract.TelephoneNumber);
+                var tPlan = context.TariffPlans.Attach(contract.TariffPlan);
+                if (telNumber != null)
                 {
-                    var number = context.TelephoneNumbers.FirstOrDefault(x => !x.Assigned);
-                    if (number != null)
+                    var port = context.Ports.First(x => !x.Assigned);
+                    terminal = new Terminal()
                     {
-                        Terminal terminal = new Terminal()
-                        {
-                            PortId = port.Id,
-                            TelephoneNumberId = number.Id
-                        };
-                        port.Assigned = true;
-                        number.Assigned = true;
-                        context.Terminals.Add(terminal);
-                        context.SaveChanges();
+                        Port = port,
+                        TelephoneNumber = telNumber
+                    };
+                    port.Assigned = true;
+                    telNumber.Assigned = true;
+                    context.Terminals.Add(terminal);
+                    context.SaveChanges();
 
-                        contract = new Contract()
-                        {
-                            TariffPlanId = context.TariffPlans.First().Id,
-                            TerminalId = terminal.Id,
-                        };
-                        context.Contracts.Add(contract);
-                        context.SaveChanges();
-
-                        DateTime dt = DateTime.Now;
-                        Subscriber subscriber = new Subscriber()
-                        {
-                            ContractId = contract.Id,
-                            LastTariffPlanChanged = dt,
-                            DateOfLoan = dt,
-                            LoanAmount = 0,
-                            ExpiryDateOfLoan = dt.AddMonths(1),
-
-                        };
-                        context.Subscribers.Add(subscriber);
-                        context.SaveChanges();
-                    }
+                    DateTime dt = DateTime.Now;
+                    Subscriber subscriber = new Subscriber()
+                    {
+                        TerminalId = terminal.Id,
+                        TariffPlan = tPlan,
+                        LastTariffPlanChanged = dt,
+                        DateOfLoan = dt,
+                        LoanAmount = 0,
+                        ExpiryDateOfLoan = dt.AddMonths(1),
+                    };
+                    context.Subscribers.Add(subscriber);
+                    context.SaveChanges();
                 }
             }
-            return contract;
+            return terminal;
         }
 
-        public void CancelContract(Contract contract)
-        { }
+        public bool FreeTerminal(Terminal terminal)
+        {
+            bool free = false;
+            using (var context = new ATSEntitiesContext())
+            {
+                Subscriber subscriber = context.Subscribers.FirstOrDefault(x => x.TerminalId == terminal.Id);
+                if (subscriber != null)
+                {
+                    if (subscriber.LoanAmount > 0) return free;
+                    context.TelephoneNumbers.Attach(terminal.TelephoneNumber).Assigned = false;
+                    context.Ports.Attach(terminal.Port).Assigned = false;
+                    context.Terminals.Attach(terminal);
+                    context.Terminals.Remove(terminal);
+                    context.Subscribers.Remove(subscriber);
+                    context.SaveChanges();
+                    free = true;
+                }
+            }
+            return free;
+        }
 
-        public Terminal GetTerminal(int terminalId)
+        public IEnumerable<TariffPlan> GetTariffPlans()
         {
             using (var context = new ATSEntitiesContext())
             {
-                return context.Terminals.Find(terminalId);
+                return context.TariffPlans.ToList();
+            }
+        }
+
+        public IEnumerable<TelephoneNumber> GetTelephoneNumbers()
+        {
+            using (var context = new ATSEntitiesContext())
+            {
+                return (from number in context.TelephoneNumbers
+                        where !number.Assigned
+                        select number).ToList();
             }
         }
     }

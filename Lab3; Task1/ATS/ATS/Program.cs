@@ -1,4 +1,6 @@
-﻿using System;
+﻿#undef START_CONTRACT
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -13,11 +15,24 @@ namespace ATS
         static void Main(string[] args)
         {
             string fileName = @"..\..\AppObjs.xml";
-                
+
             Provider provider = new Provider();
-            //Contract contract= provider.SignContract();
-            //XmlSerialize(contract, fileName);
-            Contract contract = XmlDeserialize<Contract>(fileName);
+#if START_CONTRACT
+            TelephoneNumber telNum = provider.GetTelephoneNumbers().First();
+            TariffPlan tPlan = provider.GetTariffPlans().OrderBy(x => x.Cost).First();
+            Contract contract = new Contract()
+            {
+                TelephoneNumber = telNum,
+                TariffPlan = tPlan
+            };
+            Terminal terminal = provider.SignContract(contract);
+            if (terminal == null) return;
+            XmlSerialize(terminal, fileName);
+#else
+            Terminal terminal = XmlDeserialize<Terminal>(fileName);
+#endif
+            //bool freed = provider.FreeTerminal(terminal);
+
         }
 
         public static void XmlSerialize(object obj, string fileName)

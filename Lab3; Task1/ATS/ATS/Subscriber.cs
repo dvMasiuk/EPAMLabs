@@ -1,12 +1,12 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.Spatial;
+
 namespace ATS
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
-
-    public partial class Subscriber
+    public class Subscriber
     {
         public Subscriber()
         {
@@ -26,7 +26,11 @@ namespace ATS
 
         public int LoanAmount { get; set; }
 
-        public int ContractId { get; set; }
+        public int TerminalId { get; set; }
+
+        public int TariffPlanId { get; set; }
+
+        public virtual TariffPlan TariffPlan { get; set; }
 
         public virtual ICollection<Call> Calls { get; set; }
     }
