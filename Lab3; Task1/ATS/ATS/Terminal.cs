@@ -12,21 +12,20 @@ namespace ATS
 
         public int Id { get; set; }
 
-        public void Display(string message)
-        {
-            Console.WriteLine(message);
-        }
-
         public void Call(string number)
         {
-            //if (PortState == PortState.Connected)
-            //    PortState = PortState.Calling;
+            if (this._port != null)
+            {
+                this._port.StartCall(number);
+            }
         }
 
-        public void End()
+        public void EndCall()
         {
-            //if (PortState == PortState.Calling)
-            //    PortState = PortState.Connected;
+            if (this._port != null)
+            {
+                this._port.FinishCall();
+            }
         }
 
         public void Connect(Port port)
@@ -34,7 +33,7 @@ namespace ATS
             if (port != null)
             {
                 this._port = port;
-                this._port.PortState = PortState.Connected;
+                this._port.Plug(this);
             }
         }
 
@@ -42,7 +41,7 @@ namespace ATS
         {
             if (this._port != null)
             {
-                this._port.PortState = PortState.Disconnected;
+                this._port.UnPlug();
                 this._port = null;
             }
         }

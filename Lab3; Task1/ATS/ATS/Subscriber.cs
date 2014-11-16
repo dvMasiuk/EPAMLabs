@@ -15,22 +15,21 @@ namespace ATS
 
         public int Id { get; set; }
 
-        [Column(TypeName = "date")]
         public DateTime LastTariffPlanChanged { get; set; }
 
-        [Column(TypeName = "date")]
         public DateTime DateOfLoan { get; set; }
 
-        [Column(TypeName = "date")]
         public DateTime ExpiryDateOfLoan { get; set; }
 
-        public int LoanAmount { get; set; }
+        public double LoanAmount { get; set; }
 
         public int TerminalId { get; set; }
 
         public int TelephoneNumberId { get; set; }
 
         public int TariffPlanId { get; set; }
+
+        public int? PortId { get; set; }
 
         public virtual TariffPlan TariffPlan { get; set; }
 

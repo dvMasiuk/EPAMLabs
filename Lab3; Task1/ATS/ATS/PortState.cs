@@ -8,8 +8,8 @@ namespace ATS
 {
     public enum PortState
     {
-        Connected,
         Disconnected,
+        Connected,
         Calling,
         Ending
     }

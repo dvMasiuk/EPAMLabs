@@ -1,4 +1,5 @@
 ﻿#undef START_CONTRACT
+#undef END_CONTRACT
 
 using System;
 using System.Collections.Generic;
@@ -31,13 +32,17 @@ namespace ATS
 #else
             Terminal terminal = XmlDeserialize<Terminal>(fileName);
 #endif
-            //bool freed = provider.FreeTerminal(terminal);
-
             terminal.Connect(provider.GetPort());
 
-
+            terminal.Call("12-23-45");
+            System.Threading.Thread.Sleep(new TimeSpan(0, 0, 5));
+            terminal.EndCall();
 
             terminal.Disconnect();
+
+#if END_CONTRACT
+            bool freed = provider.FreeTerminal(terminal);
+#endif
         }
 
         public static void XmlSerialize(object obj, string fileName)

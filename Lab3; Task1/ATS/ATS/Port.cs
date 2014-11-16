@@ -7,35 +7,46 @@ using System.ComponentModel;
 
 namespace ATS
 {
-    public class Port : INotifyPropertyChanged
+    public class Port
     {
         public int Id { get; set; }
 
         public int Number { get; set; }
 
-        public bool Assigned { get; set; }
+        public PortState PortState { get; set; }
 
-        private PortState _portState;
+        public event EventHandler<PortStateChangedEventArgs> PortStateChanged;
 
-        [NotMapped]
-        public PortState PortState
+        protected void OnPortStateChanged(PortStateChangedEventArgs e)
         {
-            get { return this._portState; }
-            set
+            if (PortStateChanged != null)
             {
-                this._portState = value;
-                OnPropertyChanged("PortState");
+                PortStateChanged(this, e);
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void OnPropertyChanged(string name)
+        public void Plug(Terminal terminal)
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(name));
-            }
+            PortState = PortState.Connected;
+            OnPortStateChanged(new PortStateChangedEventArgs(terminal.Id));
+        }
+
+        public void UnPlug()
+        {
+            PortState = PortState.Disconnected;
+            OnPortStateChanged(new PortStateChangedEventArgs());
+        }
+
+        public void StartCall(string number)
+        {
+            PortState = PortState.Calling;
+            OnPortStateChanged(new PortStateChangedEventArgs(number));
+        }
+
+        public void FinishCall()
+        {
+            PortState = PortState.Ending;
+            OnPortStateChanged(new PortStateChangedEventArgs());
         }
     }
 }

@@ -46,6 +46,8 @@ namespace ATS
                     if (subscriber.LoanAmount > 0) return free;
                     context.Terminals.Attach(terminal);
                     context.Terminals.Remove(terminal);
+                    if (subscriber.PortId.HasValue)
+                        context.Ports.Find(subscriber.PortId).PortState = PortState.Disconnected;
                     context.Subscribers.Remove(subscriber);
                     context.SaveChanges();
                     free = true;
@@ -77,34 +79,75 @@ namespace ATS
         {
             using (var context = new ATSEntitiesContext())
             {
-                Port port = context.Ports.FirstOrDefault(x => !x.Assigned);
+                Port port = context.Ports.FirstOrDefault(x => x.PortState == PortState.Disconnected);
                 if (port != null)
-                    port.PropertyChanged += port_PropertyChanged;
+                    port.PortStateChanged += port_PortStateChanged;
                 return port;
             }
         }
 
-        void port_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        void port_PortStateChanged(object sender, PortStateChangedEventArgs e)
         {
             using (var context = new ATSEntitiesContext())
             {
                 Port port = context.Ports.Attach((Port)sender);
+                context.Entry(port).State = System.Data.Entity.EntityState.Modified;
                 switch (port.PortState)
                 {
                     case PortState.Connected:
-                        port.Assigned = true;
+                        if (e.Data is int)
+                        {
+                            Subscriber subscriber = context.Subscribers.FirstOrDefault(x => x.TerminalId == (int)e.Data);
+                            if (subscriber != null)
+                                subscriber.PortId = port.Id;
+                        }
                         break;
                     case PortState.Disconnected:
-                        port.Assigned = false;
-                        port.PropertyChanged -= port_PropertyChanged;
+                        context.Subscribers.First(x => x.PortId == port.Id).PortId = null;
+                        port.PortStateChanged -= port_PortStateChanged;
                         break;
                     case PortState.Calling:
+                        if (e.Data is string)
+                        {
+                            Subscriber subscriber = context.Subscribers.First(x => x.PortId == port.Id);
+                            if (DateTime.Now < subscriber.ExpiryDateOfLoan)
+                            {
+                                TelephoneNumber telNum = context.TelephoneNumbers.FirstOrDefault(x => x.Number.Equals((string)e.Data));
+                                if (telNum != null)
+                                {
+                                    Subscriber targetSubs = context.Subscribers.FirstOrDefault(x => x.TelephoneNumberId == telNum.Id);
+                                    if (targetSubs!=null && targetSubs.PortId.HasValue)
+                                    {
+                                        Port targetSubsPort = context.Ports.Find(targetSubs.PortId.Value);
+                                        if (targetSubsPort.PortState != PortState.Calling)
+                                        {
+                                            context.Calls.Add(new Call()
+                                            {
+                                                Date = DateTime.Now,
+                                                Subscriber = subscriber,
+                                                Ended = false
+                                            });
+                                        }
+                                    }
+                                }
+                            }
+                        }
                         break;
                     case PortState.Ending:
+                        DateTime dt = DateTime.Now;
+                        Call call = context.Subscribers.First(y => y.PortId == port.Id).Calls.FirstOrDefault(x => !x.Ended);
+                        if (call != null)
+                        {
+                            call.Duration = dt - call.Date;
+                            call.Cost = Math.Ceiling(call.Duration.Value.TotalMinutes) * call.Subscriber.TariffPlan.Cost;
+                            call.Subscriber.LoanAmount += call.Cost.Value;
+                            call.Ended = true;
+                        }
                         break;
                 }
                 context.SaveChanges();
             }
         }
+
     }
 }

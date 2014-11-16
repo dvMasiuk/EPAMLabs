@@ -14,7 +14,7 @@ namespace ATS
         [StringLength(10)]
         public string Name { get; set; }
 
-        public int Cost { get; set; }
+        public double Cost { get; set; }
 
         public virtual ICollection<Subscriber> Subscribers { get; set; }
     }
