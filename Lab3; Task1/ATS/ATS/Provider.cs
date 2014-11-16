@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -116,7 +117,7 @@ namespace ATS
                                 if (telNum != null)
                                 {
                                     Subscriber targetSubs = context.Subscribers.FirstOrDefault(x => x.TelephoneNumberId == telNum.Id);
-                                    if (targetSubs!=null && targetSubs.PortId.HasValue)
+                                    if (targetSubs != null && targetSubs.PortId.HasValue)
                                     {
                                         Port targetSubsPort = context.Ports.Find(targetSubs.PortId.Value);
                                         if (targetSubsPort.PortState != PortState.Calling)
@@ -125,7 +126,8 @@ namespace ATS
                                             {
                                                 Date = DateTime.Now,
                                                 Subscriber = subscriber,
-                                                Ended = false
+                                                TargetNumber = telNum.Number,
+                                                Ended = false,
                                             });
                                         }
                                     }
@@ -138,8 +140,10 @@ namespace ATS
                         Call call = context.Subscribers.First(y => y.PortId == port.Id).Calls.FirstOrDefault(x => !x.Ended);
                         if (call != null)
                         {
-                            call.Duration = dt - call.Date;
-                            call.Cost = Math.Ceiling(call.Duration.Value.TotalMinutes) * call.Subscriber.TariffPlan.Cost;
+                            TimeSpan ts = dt - call.Date;
+                            call.Duration = ts;
+                            call.Cost = Math.Ceiling(new TimeSpan(ts.Hours, ts.Minutes, ts.Seconds).TotalMinutes) *
+                                 call.Subscriber.TariffPlan.Cost;
                             call.Subscriber.LoanAmount += call.Cost.Value;
                             call.Ended = true;
                         }
@@ -149,5 +153,87 @@ namespace ATS
             }
         }
 
+        public string GetReport(Terminal terminal, params object[] filter)
+        {
+            using (var context = new ATSEntitiesContext())
+            {
+                IEnumerable<Call> calls;
+                Subscriber subscriber =
+                    context.Subscribers.First(x => x.TerminalId == terminal.Id);
+
+                if (filter.Length > 0)
+                {
+                    ParameterExpression pe = Expression.Parameter(typeof(Call), "call");
+                    var listExp = new List<Expression>();
+                    for (int i = 0; i < filter.Length; i++)
+                    {
+                        if (filter[i] is DateTime)
+                        {
+                            Expression exp1 = Expression.Property(pe, "Date");
+                            Expression exp2 = Expression.Constant(filter[i], typeof(DateTime));
+                            Expression left = Expression.Property(exp1, "Year");
+                            Expression right = Expression.Property(exp2, "Year");
+                            listExp.Add(Expression.Equal(left, right));
+                            left = Expression.Property(exp1, "Month");
+                            right = Expression.Property(exp2, "Month");
+                            listExp.Add(Expression.Equal(left, right));
+                            left = Expression.Property(exp1, "Day");
+                            right = Expression.Property(exp2, "Day");
+                            listExp.Add(Expression.Equal(left, right));
+                        }
+                        else
+                            if (filter[i] is ValueType)
+                            {
+                                Expression left = Expression.Property(pe, "Cost");
+                                Type type = filter[i].GetType();
+                                Expression right = Expression.Constant(Convert.ToDouble(filter[i]), typeof(double?));
+                                listExp.Add(Expression.Equal(left, right));
+                            }
+                            else
+                                if (filter[i] is string)
+                                {
+                                    Expression callExpr = Expression.Call(
+                                    Expression.Property(pe, "TargetNumber"),
+                                    typeof(string).GetMethod("Equals", new Type[] { typeof(string) }),
+                                    Expression.Constant(filter[i], typeof(string)));
+                                    listExp.Add(callExpr);
+                                }
+                    }
+                    Expression exp = listExp[0];
+                    for (int i = 1; i < listExp.Count; i++)
+                    {
+                        exp = Expression.And(exp, listExp[i]);
+                    }
+                    var predicate = Expression.Lambda<Func<Call, bool>>(exp, pe).Compile();
+                    calls = subscriber.Calls.Where(predicate);
+                }
+                else
+                {
+                    calls = subscriber.Calls;
+                }
+
+                StringBuilder sb = new StringBuilder();
+                foreach (var item in calls)
+                {
+                    sb.AppendLine("Call " + item.Id + ":");
+                    sb.Append(string.Format(" Date: {0}\n Cost: {1}\n Duration: {2}\n TargetNumber: {3}\n", item.Date, item.Cost, item.Duration, item.TargetNumber));
+                }
+                return sb.ToString();
+            }
+        }
+
+        public void ChangeTariffPlan(Terminal terminal, TariffPlan tariffPlan)
+        {
+            using (var context = new ATSEntitiesContext())
+            {
+                Subscriber subscriber =
+                    context.Subscribers.First(x => x.TerminalId == terminal.Id);
+                if (subscriber.LastTariffPlanChanged.Month < DateTime.Now.Month)
+                {
+                    subscriber.TariffPlan = context.TariffPlans.Attach(tariffPlan);
+                    context.SaveChanges();
+                }
+            }
+        }
     }
 }

@@ -70,9 +70,9 @@
     <Compile Include="ATSEntitiesContext.cs" />
     <Compile Include="Call.cs" />
     <Compile Include="Contract.cs" />
-    <Compile Include="Migrations\201411161024572_InitialCreate.cs" />
-    <Compile Include="Migrations\201411161024572_InitialCreate.Designer.cs">
-      <DependentUpon>201411161024572_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201411161549393_InitialCreate.cs" />
+    <Compile Include="Migrations\201411161549393_InitialCreate.Designer.cs">
+      <DependentUpon>201411161549393_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Port.cs" />
@@ -115,8 +115,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201411161024572_InitialCreate.resx">
-      <DependentUpon>201411161024572_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201411161549393_InitialCreate.resx">
+      <DependentUpon>201411161549393_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

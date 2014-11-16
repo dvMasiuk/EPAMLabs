@@ -36,12 +36,12 @@ namespace ATS
                 .WithRequired(e => e.TariffPlan)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<TariffPlan>()
-                .Property(e => e.Name)
-                .IsFixedLength();
-
             modelBuilder.Entity<TelephoneNumber>()
                 .Property(e => e.Number)
+                .IsFixedLength();
+
+            modelBuilder.Entity<Call>()
+                .Property(e => e.TargetNumber)
                 .IsFixedLength();
         }
     }

@@ -32,14 +32,23 @@ namespace ATS
 #else
             Terminal terminal = XmlDeserialize<Terminal>(fileName);
 #endif
+            //provider.ChangeTariffPlan(terminal,provider.GetTariffPlans().First());
             terminal.Connect(provider.GetPort());
-
-            terminal.Call("12-23-45");
+            Console.WriteLine("Port is connected.");
+            Console.WriteLine("Calling...");
+            terminal.Call("32-21-65");
             System.Threading.Thread.Sleep(new TimeSpan(0, 0, 5));
             terminal.EndCall();
+            Console.WriteLine("Call is ended.");
 
+            Console.WriteLine("Report (No Filter):");
+            Console.WriteLine(provider.GetReport(terminal));
+            Console.WriteLine("Report (Filter is Cost and TelephoneNumber):");
+            Console.WriteLine(provider.GetReport(terminal, 20, "32-21-65"));
+            Console.WriteLine("Report (Filter is Date):");
+            Console.WriteLine(provider.GetReport(terminal, DateTime.Now));
             terminal.Disconnect();
-
+            Console.ReadKey();
 #if END_CONTRACT
             bool freed = provider.FreeTerminal(terminal);
 #endif

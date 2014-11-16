@@ -18,6 +18,10 @@ namespace ATS
 
         public bool Ended { get; set; }
 
+        [Required]
+        [StringLength(8)]
+        public string TargetNumber { get; set; }
+
         public int SubscriberId { get; set; }
 
         public virtual Subscriber Subscriber { get; set; }
