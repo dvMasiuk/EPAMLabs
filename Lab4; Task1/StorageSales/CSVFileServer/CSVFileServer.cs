@@ -10,33 +10,42 @@ namespace CSVFileServer
 {
     public class CSVFileServer
     {
+        object locker = new object();
+
         private FileSystemWatcher catalogWatcher;
-        public CSVFileServer()
+        public CSVFileServer(string workingDirectory)
         {
-            string path = System.Configuration.ConfigurationManager.AppSettings["CatalogName"];
-            catalogWatcher = new FileSystemWatcher(path, "*.csv");
-            catalogWatcher.Created += catalogWatcher_Created;
+            catalogWatcher = new FileSystemWatcher(workingDirectory, "*.csv");
+            catalogWatcher.Created +=catalogWatcher_Created;
+            catalogWatcher.EnableRaisingEvents = true;
         }
 
-        void catalogWatcher_Created(object sender, FileSystemEventArgs e)
+        async void catalogWatcher_Created(object sender, FileSystemEventArgs e)
         {
-            using (DataLayerContext context = new DataLayerContext())
+            await Task.Run(() =>
             {
-                var lines = File.ReadAllLines(e.FullPath);
-                foreach (var item in lines)
+                using (DataLayerContext context = new DataLayerContext())
                 {
-                    var fields = item.Split(',');
-                    context.Orders.Add(
-                        new Order()
+                    var lines = File.ReadAllLines(e.FullPath);
+                    foreach (var item in lines)
+                    {
+                        var fields = item.Split(',');
+                        lock (locker)
                         {
-                            Date = DateTime.Parse(fields[0]),
-                            Customer = context.Customers.First(x => x.Name.Equals(fields[1])),
-                            Product = context.Products.First(x => x.Name.Equals(fields[2])),
-                            Sum = double.Parse(fields[3])
-                        });
+                            string customer=string.Copy(fields[1]), product=string.Copy(fields[2]);
+                            context.Orders.Add(
+                                new Order()
+                                {
+                                    Date = DateTime.Parse(fields[0]),
+                                    Customer = context.Customers.FirstOrDefault(x => x.Name.Equals(customer)) ?? context.Customers.Add(new Customer() { Name = fields[1] }),
+                                    Product = context.Products.FirstOrDefault(x => x.Name.Equals(product)) ?? context.Products.Add(new Product() { Name = fields[2] }),
+                                    Sum = double.Parse(fields[3])
+                                });
+                        }
+                    }
+                    context.SaveChanges();
                 }
-                context.SaveChanges();
-            }
+            });
         }
         //public string CatalogName { get; private set; }
     }

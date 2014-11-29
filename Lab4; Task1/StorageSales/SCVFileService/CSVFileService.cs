@@ -21,7 +21,8 @@ namespace CSVFileService
 
         protected override void OnStart(string[] args)
         {
-            server = new CSVFileServer.CSVFileServer();
+            string workingDirectory = System.Configuration.ConfigurationManager.AppSettings["CatalogName"];
+            server = new CSVFileServer.CSVFileServer(workingDirectory);
         }
 
         protected override void OnStop()
