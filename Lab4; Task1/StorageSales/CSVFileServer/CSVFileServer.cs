@@ -16,11 +16,11 @@ namespace CSVFileServer
         public CSVFileServer(string workingDirectory)
         {
             catalogWatcher = new FileSystemWatcher(workingDirectory, "*.csv");
-            catalogWatcher.Created +=catalogWatcher_Created;
+            catalogWatcher.Created += catalogWatcher_Created;
             catalogWatcher.EnableRaisingEvents = true;
         }
 
-        async void catalogWatcher_Created(object sender, FileSystemEventArgs e)
+         async void catalogWatcher_Created(object sender, FileSystemEventArgs e)
         {
             await Task.Run(() =>
             {
@@ -32,7 +32,7 @@ namespace CSVFileServer
                         var fields = item.Split(',');
                         lock (locker)
                         {
-                            string customer=string.Copy(fields[1]), product=string.Copy(fields[2]);
+                            string customer = string.Copy(fields[1]), product = string.Copy(fields[2]);
                             context.Orders.Add(
                                 new Order()
                                 {
@@ -41,9 +41,9 @@ namespace CSVFileServer
                                     Product = context.Products.FirstOrDefault(x => x.Name.Equals(product)) ?? context.Products.Add(new Product() { Name = fields[2] }),
                                     Sum = double.Parse(fields[3])
                                 });
+                            context.SaveChanges();
                         }
                     }
-                    context.SaveChanges();
                 }
             });
         }
