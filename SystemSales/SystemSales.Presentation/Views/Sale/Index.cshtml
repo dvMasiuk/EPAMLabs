@@ -1,0 +1,23 @@
+﻿@model SystemSales.Presentation.Models.SaleDataViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@section Styles
+{
+    @Styles.Render("~/Content/Gridmvc.css")
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@{
+    Html.RenderPartial("_SaleGrid", Model.SaleGrid);
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/gridmvc")
+}

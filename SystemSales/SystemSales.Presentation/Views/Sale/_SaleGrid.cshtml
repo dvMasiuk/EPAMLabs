@@ -1,0 +1,11 @@
+﻿@using GridMvc.Html
+@model Grid.Mvc.Ajax.GridExtensions.AjaxGrid<SystemSales.Presentation.Models.SaleModel>
+
+@Html.Grid(Model).Named("salesGrid").Columns(columns =>
+{
+    columns.Add(sale => sale.Manager);
+    columns.Add(sale => sale.Customer);
+    columns.Add(sale => sale.Product);
+    columns.Add(sale => sale.Date);
+    columns.Add(sale => sale.Sum);
+})
