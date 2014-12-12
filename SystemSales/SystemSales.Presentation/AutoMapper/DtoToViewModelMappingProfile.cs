@@ -4,21 +4,19 @@ using AutoMapper;
 
 namespace SystemSales.Presentation.AutoMapper
 {
-    public class DtoToViewModelMappingProfile:Profile
+    public class DtoToViewModelMappingProfile : Profile
     {
         public override string ProfileName
         {
-            get { return "DomainToViewModelMappings"; }
+            get { return "DtoToViewModelMappings"; }
         }
 
         protected override void Configure()
         {
-            Mapper.CreateMap<SaleDto, SaleModel>()
-                .ForMember(dest => dest.Customer, opt => opt.MapFrom(src => src.Customer.Name));
-            Mapper.CreateMap<SaleDto, SaleModel>()
-                .ForMember(dest => dest.Manager, opt => opt.MapFrom(src => src.Manager.SecondName));
-            Mapper.CreateMap<SaleDto, SaleModel>()
-                .ForMember(dest => dest.Product, opt => opt.MapFrom(src => src.Product.Name));
+            Mapper.CreateMap<ManagerDto, ManagerViewModel>();
+            Mapper.CreateMap<CustomerDto, CustomerViewModel>();
+            Mapper.CreateMap<ProductDto, ProductViewModel>();
+            Mapper.CreateMap<SaleDto, SaleViewModel>();
         }
     }
 }

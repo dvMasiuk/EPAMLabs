@@ -13,13 +13,16 @@ namespace SystemSales.Application.AutoMapper
 
         protected override void Configure()
         {
-            Mapper.CreateMap<CustomerDto, Customer>();
-            Mapper.CreateMap<ProductDto, Product>();
             Mapper.CreateMap<ManagerDto, Manager>();
+                //.ForMember(dest => dest.Sales, opt => opt.Ignore());
+            Mapper.CreateMap<CustomerDto, Customer>();
+                //.ForMember(dest => dest.Sales, opt => opt.Ignore());
+            Mapper.CreateMap<ProductDto, Product>();
+                //.ForMember(dest => dest.Sales, opt => opt.Ignore());
             Mapper.CreateMap<SaleDto, Sale>()
-                .ForMember(dest => dest.Customer, opt => opt.MapFrom(src => src.Customer))
-                .ForMember(dest => dest.Product, opt => opt.MapFrom(src => src.Product))
-                .ForMember(dest => dest.Manager, opt => opt.MapFrom(src => src.Manager));
+                .ForMember(dest => dest.ManagerId, opt => opt.MapFrom(src => src.Manager.Id))
+                .ForMember(dest => dest.CustomerId, opt => opt.MapFrom(src => src.Customer.Id))
+                .ForMember(dest => dest.ProductId, opt => opt.MapFrom(src => src.Product.Id));
         }
     }
 }

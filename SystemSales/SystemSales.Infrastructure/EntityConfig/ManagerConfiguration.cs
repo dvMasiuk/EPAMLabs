@@ -7,7 +7,7 @@ namespace SystemSales.Infrastructure.EntityConfig
     {
         public ManagerConfiguration()
         {
-            Property(m => m.SecondName)
+            Property(m => m.Name)
                 .IsRequired();
         }
     }

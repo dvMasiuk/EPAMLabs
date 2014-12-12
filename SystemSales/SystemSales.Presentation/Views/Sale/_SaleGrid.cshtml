@@ -1,11 +1,11 @@
 ﻿@using GridMvc.Html
-@model Grid.Mvc.Ajax.GridExtensions.AjaxGrid<SystemSales.Presentation.Models.SaleModel>
+@model Grid.Mvc.Ajax.GridExtensions.AjaxGrid<SystemSales.Presentation.Models.SaleViewModel>
 
 @Html.Grid(Model).Named("salesGrid").Columns(columns =>
 {
-    columns.Add(sale => sale.Manager);
-    columns.Add(sale => sale.Customer);
-    columns.Add(sale => sale.Product);
-    columns.Add(sale => sale.Date);
+    columns.Add(sale => sale.Date.Date).Titled("Date").Format("{0:dd.MM.yyyy}");
+    columns.Add(sale => sale.Manager.Name).Titled("Manager Name");
+    columns.Add(sale => sale.Customer.Name).Titled("Customer Name");
+    columns.Add(sale => sale.Product.Name).Titled("Product Name");
     columns.Add(sale => sale.Sum);
-})
+}).WithPaging(5).Filterable()

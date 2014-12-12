@@ -1,16 +1,15 @@
-﻿@model SystemSales.Presentation.Models.SaleDataViewModel
+﻿@model SystemSales.Presentation.Models.SalesDataViewModel
 
 @{
     ViewBag.Title = "Index";
 }
 
-@section Styles
-{
-    @Styles.Render("~/Content/Gridmvc.css")
+@section Styles{
+    @Styles.Render("~/Content/gridmvc-css")
 }
 
-<h2>Index</h2>
-
+<h2>View Sales</h2>
+<hr />
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -20,4 +19,13 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/gridmvc")
+    <script type="text/javascript">
+        $(function () {
+            var url = '@Url.Action("SaleGrid")';
+            pageGrids.salesGrid.ajaxify({
+                getPagedData: url,
+                getData: url
+            });
+        });
+    </script>
 }

@@ -13,7 +13,10 @@ namespace SystemSales.Presentation.AutoMapper
 
         protected override void Configure()
         {
-            Mapper.CreateMap<SaleModel,SaleDto>();
+            Mapper.CreateMap<ManagerViewModel, ManagerDto>();
+            Mapper.CreateMap<CustomerViewModel, CustomerDto>();
+            Mapper.CreateMap<ProductViewModel, ProductDto>();
+            Mapper.CreateMap<SaleViewModel, SaleDto>();
         }
     }
 }

@@ -22,16 +22,16 @@ namespace SystemSales.Presentation.Controllers
         // GET: /Sale/
         public ActionResult Index()
         {
-            var sales = Mapper.Map<IEnumerable<SaleDto>, IEnumerable<SaleModel>>(_saleAppService.GetAll()).AsQueryable();
-            var grid = (AjaxGrid<SaleModel>)new AjaxGridFactory().CreateAjaxGrid(sales, 1, false);
-            return View(new SaleDataViewModel { SaleGrid = grid });
+            var sales = Mapper.Map<IEnumerable<SaleDto>, IEnumerable<SaleViewModel>>(_saleAppService.GetAll()).AsQueryable();
+            var grid = (AjaxGrid<SaleViewModel>)new AjaxGridFactory().CreateAjaxGrid(sales, 1, false);
+            return View(new SalesDataViewModel { SaleGrid = grid });
         }
 
-        //
-        // GET: /Sale/Details/5
-        public ActionResult Details(int id)
+        public JsonResult SaleGrid(int? page)
         {
-            return View();
+            var sales = Mapper.Map<IEnumerable<SaleDto>, IEnumerable<SaleViewModel>>(_saleAppService.GetAll()).AsQueryable();
+            var grid = (AjaxGrid<SaleViewModel>)new AjaxGridFactory().CreateAjaxGrid(sales, page ?? 1, page.HasValue);
+            return Json(new { Html = grid.ToJson("_SaleGrid", this), grid.HasItems }, JsonRequestBehavior.AllowGet);
         }
 
         //
@@ -44,11 +44,15 @@ namespace SystemSales.Presentation.Controllers
         //
         // POST: /Sale/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(SaleViewModel svm)
         {
             try
             {
+                //Mapper.AssertConfigurationIsValid();
                 // TODO: Add insert logic here
+                svm.Date = System.DateTime.Now;
+                var saleDto = Mapper.Map<SaleViewModel, SaleDto>(svm);
+                _saleAppService.Add(saleDto);
 
                 return RedirectToAction("Index");
             }

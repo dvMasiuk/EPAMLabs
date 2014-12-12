@@ -20,19 +20,23 @@ namespace SystemSales.Presentation
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/respond.js"
+                      ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css",
-                      "~/Content/ladda-bootstrap/ladda-themeless.min.css"));
+                      "~/Content/site.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/gridmvc").Include(
-                "~/Scripts/gridmvc-ext.js", "~/Scripts/gridmvc.js",
-                "~/Scripts/ladda-bootstrap/ladda.min.js", "~/Scripts/ladda-bootstrap/spin.min.js"));
+                "~/Scripts/URI.js",
+                "~/Scripts/gridmvc.js", "~/Scripts/gridmvc-ext.js",
+                "~/Scripts/ladda-bootstrap/ladda.min.js", "~/Scripts/ladda-bootstrap/spin.min.js",
+                "~/Scripts/bootstrap-datepicker.js"));
 
-            bundles.Add(new StyleBundle("~/Content/ladda").Include(
-                      "~/Content/ladda-bootstrap/ladda-themeless.min.css"));
+            bundles.Add(new StyleBundle("~/Content/gridmvc-css").Include(
+                      "~/Content/Gridmvc.css",
+                      "~/Content/ladda-bootstrap/ladda-themeless.min.css",
+                      "~/Content/gridmvc.datepicker.css"));
         }
     }
 }

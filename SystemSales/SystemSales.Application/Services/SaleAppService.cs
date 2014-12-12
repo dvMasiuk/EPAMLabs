@@ -15,7 +15,8 @@ namespace SystemSales.Application.Services
 
         public SaleAppService()
         {
-            AutoMapperConfiguration.Configure();
+            Mapper.AddProfile<DtoToEntityMappingProfile>();
+            Mapper.AddProfile<EntityToDtoMappingProfile>();
         }
         public void Add(SaleDto entity)
         {
