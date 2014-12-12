@@ -1,0 +1,64 @@
+﻿@model SystemSales.Presentation.Models.SaleViewModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Sale</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.Date)
+        @Html.HiddenFor(model => model.Manager.Id)
+        @Html.HiddenFor(model => model.Customer.Id)
+        @Html.HiddenFor(model => model.Product.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Manager, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Manager.Name)
+                @Html.ValidationMessageFor(model => model.Manager.Name)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Customer, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Customer.Name)
+                @Html.ValidationMessageFor(model => model.Customer.Name)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Product, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Product.Name)
+                @Html.ValidationMessageFor(model => model.Product.Name)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Sum, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Sum)
+                @Html.ValidationMessageFor(model => model.Sum)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

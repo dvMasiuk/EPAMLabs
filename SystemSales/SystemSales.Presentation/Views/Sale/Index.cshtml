@@ -13,6 +13,10 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+<div class="nav navbar-nav navbar-right">
+    @Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+</div>
+
 @{
     Html.RenderPartial("_SaleGrid", Model.SaleGrid);
 }

@@ -66,18 +66,21 @@ namespace SystemSales.Presentation.Controllers
         // GET: /Sale/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var saleDto = _saleAppService.GetById(id);
+            var sale = Mapper.Map<SaleDto, SaleViewModel>(saleDto);
+            return View(sale);
         }
 
         //
         // POST: /Sale/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(SaleViewModel svm)
         {
             try
             {
                 // TODO: Add update logic here
-
+                var saleDto = Mapper.Map<SaleViewModel, SaleDto>(svm);
+                _saleAppService.Update(saleDto);
                 return RedirectToAction("Index");
             }
             catch
