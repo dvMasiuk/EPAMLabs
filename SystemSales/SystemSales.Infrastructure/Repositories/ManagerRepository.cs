@@ -5,11 +5,11 @@ using SystemSales.Domain.Entities;
 
 namespace SystemSales.Infrastructure.Repositories
 {
-    public class CustomerRepository : RepositoryBase<Customer>, ICustomerRepository
+    public class ManagerRepository : RepositoryBase<Manager>, IManagerRepository
     {
-        public IEnumerable<Customer> SearchByName(string name)
+        public IEnumerable<Manager> SearchByName(string name)
         {
-            return Db.Customers.Where(x => x.Name == name);
+            return Db.Managers.Where(x => x.Name == name);
         }
     }
 }

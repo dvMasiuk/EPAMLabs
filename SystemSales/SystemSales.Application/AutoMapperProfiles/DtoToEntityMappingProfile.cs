@@ -2,7 +2,7 @@
 using SystemSales.Domain.Entities;
 using AutoMapper;
 
-namespace SystemSales.Application.AutoMapper
+namespace SystemSales.Application.AutoMapperProfiles
 {
     public class DtoToEntityMappingProfile : Profile
     {
@@ -14,12 +14,12 @@ namespace SystemSales.Application.AutoMapper
         protected override void Configure()
         {
             Mapper.CreateMap<ManagerDto, Manager>();
-                //.ForMember(dest => dest.Sales, opt => opt.Ignore());
             Mapper.CreateMap<CustomerDto, Customer>();
-                //.ForMember(dest => dest.Sales, opt => opt.Ignore());
             Mapper.CreateMap<ProductDto, Product>();
-                //.ForMember(dest => dest.Sales, opt => opt.Ignore());
             Mapper.CreateMap<SaleDto, Sale>()
+                .ForMember(dest => dest.Manager, opt => opt.Condition(src => src.Id > 0 || src.Manager.Id == 0))
+                .ForMember(dest => dest.Customer, opt => opt.Condition(src => src.Id > 0 || src.Customer.Id == 0))
+                .ForMember(dest => dest.Product, opt => opt.Condition(src => src.Id > 0 || src.Product.Id == 0))
                 .ForMember(dest => dest.ManagerId, opt => opt.MapFrom(src => src.Manager.Id))
                 .ForMember(dest => dest.CustomerId, opt => opt.MapFrom(src => src.Customer.Id))
                 .ForMember(dest => dest.ProductId, opt => opt.MapFrom(src => src.Product.Id));

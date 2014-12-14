@@ -1,26 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using SystemSales.Application.AutoMapper;
+﻿using System.Collections.Generic;
 using SystemSales.Application.Contracts.Services;
 using SystemSales.Application.TransferObjects;
+using SystemSales.Domain.Contracts.Repositories;
 using SystemSales.Domain.Entities;
-using SystemSales.Infrastructure.Repositories;
 using AutoMapper;
 
 namespace SystemSales.Application.Services
 {
-    public class SaleAppService : ISaleAppService, IDisposable
+    public class SaleAppService : ISaleAppService
     {
-        private readonly SaleRepository _saleRepository = new SaleRepository();
+        private readonly ISaleRepository _saleRepository;
 
-        public SaleAppService()
+        public SaleAppService(ISaleRepository saleRepository)
         {
-            Mapper.AddProfile<DtoToEntityMappingProfile>();
-            Mapper.AddProfile<EntityToDtoMappingProfile>();
+            _saleRepository = saleRepository;
         }
-        public void Add(SaleDto entity)
+        public void Insert(SaleDto entity)
         {
-            _saleRepository.Add(Mapper.Map<SaleDto, Sale>(entity));
+            _saleRepository.Insert(Mapper.Map<SaleDto, Sale>(entity));
         }
 
         public SaleDto GetById(int id)
@@ -38,31 +35,9 @@ namespace SystemSales.Application.Services
             _saleRepository.Update(Mapper.Map<SaleDto, Sale>(entity));
         }
 
-        public void Remove(SaleDto entity)
+        public void Delete(int id)
         {
-            _saleRepository.Remove(Mapper.Map<SaleDto, Sale>(entity));
-        }
-
-        private bool _disposed = false;
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
-        }
-
-        protected virtual void Dispose(bool disposing)
-        {
-            if (_disposed) return;
-            if (disposing)
-            {
-                _saleRepository.Dispose();
-            }
-            _disposed = true;
-        }
-
-        ~SaleAppService()
-        {
-            Dispose(false);
+            _saleRepository.Delete(id);
         }
     }
 }

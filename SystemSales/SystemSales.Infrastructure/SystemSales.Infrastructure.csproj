@@ -52,6 +52,7 @@
     <Compile Include="EntityConfig\SaleConfiguration.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repositories\CustomerRepository.cs" />
+    <Compile Include="Repositories\ManagerRepository.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />
     <Compile Include="Repositories\RepositoryBase.cs" />
     <Compile Include="Repositories\SaleRepository.cs" />

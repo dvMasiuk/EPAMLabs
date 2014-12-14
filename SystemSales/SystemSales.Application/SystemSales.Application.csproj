@@ -45,11 +45,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutoMapper\DtoToEntityMappingProfile.cs" />
-    <Compile Include="AutoMapper\EntityToDtoMappingProfile.cs" />
+    <Compile Include="AutoMapperProfiles\DtoToEntityMappingProfile.cs" />
+    <Compile Include="AutoMapperProfiles\EntityToDtoMappingProfile.cs" />
+    <Compile Include="Contracts\Services\ICustomerAppService.cs" />
+    <Compile Include="Contracts\Services\IManagerAppService.cs" />
+    <Compile Include="Contracts\Services\IProductAppService.cs" />
     <Compile Include="Contracts\Services\ISaleAppService.cs" />
     <Compile Include="Contracts\Services\IAppServiceBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CustomerAppService.cs" />
+    <Compile Include="Services\ManagerAppService.cs" />
+    <Compile Include="Services\ProductAppService.cs" />
     <Compile Include="Services\SaleAppService.cs" />
     <Compile Include="TransferObjects\CustomerDto.cs" />
     <Compile Include="TransferObjects\ManagerDto.cs" />
@@ -63,10 +69,6 @@
     <ProjectReference Include="..\SystemSales.Domain\SystemSales.Domain.csproj">
       <Project>{442bf481-9724-417e-a68a-9f13fd2b4976}</Project>
       <Name>SystemSales.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SystemSales.Infrastructure\SystemSales.Infrastructure.csproj">
-      <Project>{bc85bf5a-5d2e-4c5c-8307-db3930916063}</Project>
-      <Name>SystemSales.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

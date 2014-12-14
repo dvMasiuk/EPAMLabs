@@ -104,22 +104,22 @@ namespace SystemSales.Presentation.Controllers
 
         //
         // POST: /Account/Disassociate
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Disassociate(string loginProvider, string providerKey)
-        {
-            ManageMessageId? message = null;
-            IdentityResult result = await UserManager.RemoveLoginAsync(User.Identity.GetUserId(), new UserLoginInfo(loginProvider, providerKey));
-            if (result.Succeeded)
-            {
-                message = ManageMessageId.RemoveLoginSuccess;
-            }
-            else
-            {
-                message = ManageMessageId.Error;
-            }
-            return RedirectToAction("Manage", new { Message = message });
-        }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<ActionResult> Disassociate(string loginProvider, string providerKey)
+        //{
+        //    ManageMessageId? message = null;
+        //    IdentityResult result = await UserManager.RemoveLoginAsync(User.Identity.GetUserId(), new UserLoginInfo(loginProvider, providerKey));
+        //    if (result.Succeeded)
+        //    {
+        //        message = ManageMessageId.RemoveLoginSuccess;
+        //    }
+        //    else
+        //    {
+        //        message = ManageMessageId.Error;
+        //    }
+        //    return RedirectToAction("Manage", new { Message = message });
+        //}
 
         //
         // GET: /Account/Manage
@@ -127,11 +127,11 @@ namespace SystemSales.Presentation.Controllers
         {
             ViewBag.StatusMessage =
                 message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
-                : message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
-                : message == ManageMessageId.RemoveLoginSuccess ? "The external login was removed."
+                //: message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
+                //: message == ManageMessageId.RemoveLoginSuccess ? "The external login was removed."
                 : message == ManageMessageId.Error ? "An error has occurred."
                 : "";
-            ViewBag.HasLocalPassword = HasPassword();
+            //ViewBag.HasLocalPassword = HasPassword();
             ViewBag.ReturnUrl = Url.Action("Manage");
             return View();
         }
@@ -142,11 +142,11 @@ namespace SystemSales.Presentation.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Manage(ManageUserViewModel model)
         {
-            bool hasPassword = HasPassword();
-            ViewBag.HasLocalPassword = hasPassword;
+            //bool hasPassword = HasPassword();
+            //ViewBag.HasLocalPassword = hasPassword;
             ViewBag.ReturnUrl = Url.Action("Manage");
-            if (hasPassword)
-            {
+            //if (hasPassword)
+            //{
                 if (ModelState.IsValid)
                 {
                     IdentityResult result = await UserManager.ChangePasswordAsync(User.Identity.GetUserId(), model.OldPassword, model.NewPassword);
@@ -159,29 +159,29 @@ namespace SystemSales.Presentation.Controllers
                         AddErrors(result);
                     }
                 }
-            }
-            else
-            {
-                // User does not have a password so remove any validation errors caused by a missing OldPassword field
-                ModelState state = ModelState["OldPassword"];
-                if (state != null)
-                {
-                    state.Errors.Clear();
-                }
+            //}
+            //else
+            //{
+            //    // User does not have a password so remove any validation errors caused by a missing OldPassword field
+            //    ModelState state = ModelState["OldPassword"];
+            //    if (state != null)
+            //    {
+            //        state.Errors.Clear();
+            //    }
 
-                if (ModelState.IsValid)
-                {
-                    IdentityResult result = await UserManager.AddPasswordAsync(User.Identity.GetUserId(), model.NewPassword);
-                    if (result.Succeeded)
-                    {
-                        return RedirectToAction("Manage", new { Message = ManageMessageId.SetPasswordSuccess });
-                    }
-                    else
-                    {
-                        AddErrors(result);
-                    }
-                }
-            }
+            //    if (ModelState.IsValid)
+            //    {
+            //        IdentityResult result = await UserManager.AddPasswordAsync(User.Identity.GetUserId(), model.NewPassword);
+            //        if (result.Succeeded)
+            //        {
+            //            return RedirectToAction("Manage", new { Message = ManageMessageId.SetPasswordSuccess });
+            //        }
+            //        else
+            //        {
+            //            AddErrors(result);
+            //        }
+            //    }
+            //}
 
             // If we got this far, something failed, redisplay form
             return View(model);
@@ -227,30 +227,30 @@ namespace SystemSales.Presentation.Controllers
 
         //
         // POST: /Account/LinkLogin
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult LinkLogin(string provider)
-        {
-            // Request a redirect to the external login provider to link a login for the current user
-            return new ChallengeResult(provider, Url.Action("LinkLoginCallback", "Account"), User.Identity.GetUserId());
-        }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult LinkLogin(string provider)
+        //{
+        //    // Request a redirect to the external login provider to link a login for the current user
+        //    return new ChallengeResult(provider, Url.Action("LinkLoginCallback", "Account"), User.Identity.GetUserId());
+        //}
 
         //
         // GET: /Account/LinkLoginCallback
-        public async Task<ActionResult> LinkLoginCallback()
-        {
-            var loginInfo = await AuthenticationManager.GetExternalLoginInfoAsync(XsrfKey, User.Identity.GetUserId());
-            if (loginInfo == null)
-            {
-                return RedirectToAction("Manage", new { Message = ManageMessageId.Error });
-            }
-            var result = await UserManager.AddLoginAsync(User.Identity.GetUserId(), loginInfo.Login);
-            if (result.Succeeded)
-            {
-                return RedirectToAction("Manage");
-            }
-            return RedirectToAction("Manage", new { Message = ManageMessageId.Error });
-        }
+        //public async Task<ActionResult> LinkLoginCallback()
+        //{
+        //    var loginInfo = await AuthenticationManager.GetExternalLoginInfoAsync(XsrfKey, User.Identity.GetUserId());
+        //    if (loginInfo == null)
+        //    {
+        //        return RedirectToAction("Manage", new { Message = ManageMessageId.Error });
+        //    }
+        //    var result = await UserManager.AddLoginAsync(User.Identity.GetUserId(), loginInfo.Login);
+        //    if (result.Succeeded)
+        //    {
+        //        return RedirectToAction("Manage");
+        //    }
+        //    return RedirectToAction("Manage", new { Message = ManageMessageId.Error });
+        //}
 
         //
         // POST: /Account/ExternalLoginConfirmation
@@ -308,13 +308,13 @@ namespace SystemSales.Presentation.Controllers
         //    return View();
         //}
 
-        [ChildActionOnly]
-        public ActionResult RemoveAccountList()
-        {
-            var linkedAccounts = UserManager.GetLogins(User.Identity.GetUserId());
-            ViewBag.ShowRemoveButton = HasPassword() || linkedAccounts.Count > 1;
-            return (ActionResult)PartialView("_RemoveAccountPartial", linkedAccounts);
-        }
+        //[ChildActionOnly]
+        //public ActionResult RemoveAccountList()
+        //{
+        //    var linkedAccounts = UserManager.GetLogins(User.Identity.GetUserId());
+        //    ViewBag.ShowRemoveButton = HasPassword() || linkedAccounts.Count > 1;
+        //    return (ActionResult)PartialView("_RemoveAccountPartial", linkedAccounts);
+        //}
 
         protected override void Dispose(bool disposing)
         {
@@ -328,7 +328,7 @@ namespace SystemSales.Presentation.Controllers
 
         #region Helpers
         // Used for XSRF protection when adding external logins
-        private const string XsrfKey = "XsrfId";
+        //private const string XsrfKey = "XsrfId";
 
         private IAuthenticationManager AuthenticationManager
         {
@@ -353,15 +353,15 @@ namespace SystemSales.Presentation.Controllers
             }
         }
 
-        private bool HasPassword()
-        {
-            var user = UserManager.FindById(User.Identity.GetUserId());
-            if (user != null)
-            {
-                return user.PasswordHash != null;
-            }
-            return false;
-        }
+        //private bool HasPassword()
+        //{
+        //    var user = UserManager.FindById(User.Identity.GetUserId());
+        //    if (user != null)
+        //    {
+        //        return user.PasswordHash != null;
+        //    }
+        //    return false;
+        //}
 
         public enum ManageMessageId
         {
@@ -383,33 +383,33 @@ namespace SystemSales.Presentation.Controllers
             }
         }
 
-        private class ChallengeResult : HttpUnauthorizedResult
-        {
-            public ChallengeResult(string provider, string redirectUri) : this(provider, redirectUri, null)
-            {
-            }
+        //private class ChallengeResult : HttpUnauthorizedResult
+        //{
+        //    public ChallengeResult(string provider, string redirectUri) : this(provider, redirectUri, null)
+        //    {
+        //    }
 
-            public ChallengeResult(string provider, string redirectUri, string userId)
-            {
-                LoginProvider = provider;
-                RedirectUri = redirectUri;
-                UserId = userId;
-            }
+        //    public ChallengeResult(string provider, string redirectUri, string userId)
+        //    {
+        //        LoginProvider = provider;
+        //        RedirectUri = redirectUri;
+        //        UserId = userId;
+        //    }
 
-            public string LoginProvider { get; set; }
-            public string RedirectUri { get; set; }
-            public string UserId { get; set; }
+        //    public string LoginProvider { get; set; }
+        //    public string RedirectUri { get; set; }
+        //    public string UserId { get; set; }
 
-            public override void ExecuteResult(ControllerContext context)
-            {
-                var properties = new AuthenticationProperties() { RedirectUri = RedirectUri };
-                if (UserId != null)
-                {
-                    properties.Dictionary[XsrfKey] = UserId;
-                }
-                context.HttpContext.GetOwinContext().Authentication.Challenge(properties, LoginProvider);
-            }
-        }
+        //    public override void ExecuteResult(ControllerContext context)
+        //    {
+        //        var properties = new AuthenticationProperties() { RedirectUri = RedirectUri };
+        //        if (UserId != null)
+        //        {
+        //            properties.Dictionary[XsrfKey] = UserId;
+        //        }
+        //        context.HttpContext.GetOwinContext().Authentication.Challenge(properties, LoginProvider);
+        //    }
+        //}
         #endregion
     }
 }

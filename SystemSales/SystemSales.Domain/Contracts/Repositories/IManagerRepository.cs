@@ -3,8 +3,8 @@ using SystemSales.Domain.Entities;
 
 namespace SystemSales.Domain.Contracts.Repositories
 {
-    public interface IProductRepository : IRepositoryBase<Product>
+    public interface IManagerRepository : IRepositoryBase<Manager>
     {
-        IEnumerable<Product> SearchByName(string name);
+        IEnumerable<Manager> SearchByName(string name);
     }
 }

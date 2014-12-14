@@ -8,8 +8,10 @@
     columns.Add(sale => sale.Customer.Name).Titled("Customer Name");
     columns.Add(sale => sale.Product.Name).Titled("Product Name");
     columns.Add(sale => sale.Sum);
+    if (User.IsInRole("Admins"))
     columns.Add().Encoded(false).Sanitized(false).RenderValueAs(sale =>
         @<b>
-            @Html.ActionLink("Edit", "Edit", new { id = sale.Id })
+            @Html.ActionLink("Edit", "Edit", new { id = sale.Id })<br/>
+            @Html.ActionLink("Delete", "Delete", new { id = sale.Id }, htmlAttributes: new { onclick = "return deleteClick(this)" })
         </b>);
-}).WithPaging(5).Filterable().Sortable()
+}).WithPaging(4).Filterable().WithMultipleFilters().Sortable()

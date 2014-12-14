@@ -11,11 +11,10 @@
 <h2>View Sales</h2>
 <hr />
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @if (User.IsInRole("Admins"))
+    {@Html.ActionLink("Create New", "Create")}
+    @Html.ActionLink("Chart", "Chart", routeValues: null, htmlAttributes: new { @class = "nav navbar-nav navbar-right", target = "_blank" })
 </p>
-<div class="nav navbar-nav navbar-right">
-    @Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
-</div>
 
 @{
     Html.RenderPartial("_SaleGrid", Model.SaleGrid);
@@ -25,11 +24,28 @@
     @Scripts.Render("~/bundles/gridmvc")
     <script type="text/javascript">
         $(function () {
-            var url = '@Url.Action("SaleGrid")';
+            var url = '@Url.Action("Grid")';
             pageGrids.salesGrid.ajaxify({
                 getPagedData: url,
                 getData: url
             });
         });
+
+        function deleteClick(sender) {
+            if (sender instanceof HTMLAnchorElement) {
+                var gridWrap = $(sender).closest(".grid-wrap");
+                var gridTableBody = gridWrap.find("tbody");
+                var gridNumPage = gridWrap.find("li.active .grid-page-link").attr('data-page');
+
+                $.ajax(sender.href, {
+                    type: "POST",
+                    data: { page: gridNumPage },
+                    success: function (response) {
+                        gridTableBody.html(response.Html);
+                    }
+                });
+            }
+            return false;
+        }
     </script>
 }

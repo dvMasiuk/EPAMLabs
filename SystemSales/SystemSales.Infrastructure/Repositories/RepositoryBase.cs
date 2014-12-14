@@ -9,11 +9,6 @@ namespace SystemSales.Infrastructure.Repositories
     public class RepositoryBase<TEntity> : IDisposable, IRepositoryBase<TEntity> where TEntity : class
     {
         protected SalesContext Db = new SalesContext();
-        public void Add(TEntity entity)
-        {
-            Db.Set<TEntity>().Add(entity);
-            Db.SaveChanges();
-        }
 
         public TEntity GetById(int id)
         {
@@ -25,14 +20,21 @@ namespace SystemSales.Infrastructure.Repositories
             return Db.Set<TEntity>().ToList();
         }
 
+        public void Insert(TEntity entity)
+        {
+            Db.Set<TEntity>().Add(entity);
+            Db.SaveChanges();
+        }
+
         public void Update(TEntity entity)
         {
             Db.Entry(entity).State = EntityState.Modified;
             Db.SaveChanges();
         }
 
-        public void Remove(TEntity entity)
+        public void Delete(int id)
         {
+            var entity = Db.Set<TEntity>().Find(id);
             Db.Set<TEntity>().Remove(entity);
             Db.SaveChanges();
         }

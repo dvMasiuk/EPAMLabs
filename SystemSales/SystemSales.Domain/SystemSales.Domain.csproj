@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\Repositories\IManagerRepository.cs" />
     <Compile Include="Contracts\Repositories\ISaleRepository.cs" />
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\Manager.cs" />

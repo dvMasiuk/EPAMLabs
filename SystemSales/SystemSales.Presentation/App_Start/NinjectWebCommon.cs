@@ -2,6 +2,8 @@ using System;
 using System.Web;
 using SystemSales.Application.Contracts.Services;
 using SystemSales.Application.Services;
+using SystemSales.Domain.Contracts.Repositories;
+using SystemSales.Infrastructure.Repositories;
 using SystemSales.Presentation.App_Start;
 using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 using Ninject;
@@ -64,6 +66,14 @@ namespace SystemSales.Presentation.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<ISaleAppService>().To<SaleAppService>();
+            kernel.Bind<IManagerAppService>().To<ManagerAppService>();
+            kernel.Bind<ICustomerAppService>().To<CustomerAppService>();
+            kernel.Bind<IProductAppService>().To<ProductAppService>();
+
+            kernel.Bind<ISaleRepository>().To<SaleRepository>();
+            kernel.Bind<IManagerRepository>().To<ManagerRepository>();
+            kernel.Bind<ICustomerRepository>().To<CustomerRepository>();
+            kernel.Bind<IProductRepository>().To<ProductRepository>();
         }        
     }
 }

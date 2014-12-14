@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using SystemSales.Application.AutoMapperProfiles;
+using AutoMapper;
 
 namespace SystemSales.Presentation.AutoMapper
 {
@@ -11,6 +12,9 @@ namespace SystemSales.Presentation.AutoMapper
                 x.AddProfile<ViewModelToDtoMappingProfile>();
                 x.AddProfile<DtoToViewModelMappingProfile>();
             });
+
+            Mapper.AddProfile<DtoToEntityMappingProfile>();
+            Mapper.AddProfile<EntityToDtoMappingProfile>();
         }
     }
 }
