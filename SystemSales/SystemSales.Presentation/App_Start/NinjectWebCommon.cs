@@ -4,7 +4,7 @@ using SystemSales.Application.Contracts.Services;
 using SystemSales.Application.Services;
 using SystemSales.Domain.Contracts.Repositories;
 using SystemSales.Infrastructure.Repositories;
-using SystemSales.Presentation.App_Start;
+using SystemSales.Presentation;
 using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 using Ninject;
 using Ninject.Web.Common;
@@ -13,7 +13,7 @@ using WebActivatorEx;
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(NinjectWebCommon), "Start")]
 [assembly: ApplicationShutdownMethod(typeof(NinjectWebCommon), "Stop")]
 
-namespace SystemSales.Presentation.App_Start
+namespace SystemSales.Presentation
 {
     public static class NinjectWebCommon 
     {

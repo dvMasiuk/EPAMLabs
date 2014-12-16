@@ -1,28 +1,21 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using Grid.Mvc.Ajax.GridExtensions;
+using System.Web.Mvc;
 
 namespace SystemSales.Presentation.Models
 {
-    public class SalesDataViewModel
-    {
-        public AjaxGrid<SaleViewModel> SaleGrid;
-    }
-
     public class SaleViewModel
     {
-        [Key]
+        [HiddenInput(DisplayValue = false)]
         public int Id { get; set; }
 
+        [Required]
         public DateTime Date { get; set; }
 
-        [Display(Name = "Manager Name")]
         public ManagerViewModel Manager { get; set; }
 
-        [Display(Name = "Customer Name")]
         public CustomerViewModel Customer { get; set; }
 
-        [Display(Name = "Product Name")]
         public ProductViewModel Product { get; set; }
 
         [Required]
@@ -31,28 +24,31 @@ namespace SystemSales.Presentation.Models
 
     public class CustomerViewModel
     {
-        [Key]
+        [HiddenInput(DisplayValue = false)]
         public int Id { get; set; }
 
         [Required]
+        [Display(Name = "Customer Name")]
         public string Name { get; set; }
     }
 
     public class ProductViewModel
     {
-        [Key]
+        [HiddenInput(DisplayValue = false)]
         public int Id { get; set; }
 
         [Required]
+        [Display(Name = "Product Name")]
         public string Name { get; set; }
     }
 
     public class ManagerViewModel
     {
-        [Key]
+        [HiddenInput(DisplayValue = false)]
         public int Id { get; set; }
 
         [Required]
+        [Display(Name = "Manager Name")]
         public string Name { get; set; }
     }
 }

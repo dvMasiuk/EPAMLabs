@@ -32,15 +32,27 @@ namespace SystemSales.Presentation.Controllers
         public ActionResult Index()
         {
             var sales = Mapper.Map<IEnumerable<SaleDto>, IEnumerable<SaleViewModel>>(_saleAppService.GetAll()).AsQueryable();
-            var grid = (AjaxGrid<SaleViewModel>)new AjaxGridFactory().CreateAjaxGrid(sales, 1, false);
-            return View(new SalesDataViewModel { SaleGrid = grid });
+            var grid = new AjaxGridFactory().CreateAjaxGrid(sales, 1, false);
+            var salesGrid = new GridViewModel<SaleViewModel>()
+            {
+                Grid = (AjaxGrid<SaleViewModel>)grid,
+                EnabledControlColumn = User.IsInRole("Admins"),
+                NameGrid = "salesGrid"
+            };
+            return View(salesGrid);
         }
 
         public JsonResult Grid(int? page)
         {
             var sales = Mapper.Map<IEnumerable<SaleDto>, IEnumerable<SaleViewModel>>(_saleAppService.GetAll()).AsQueryable();
-            var grid = (AjaxGrid<SaleViewModel>)new AjaxGridFactory().CreateAjaxGrid(sales, page ?? 1, page.HasValue);
-            return Json(new { Html = grid.ToJson("_SaleGrid", this), grid.HasItems }, JsonRequestBehavior.AllowGet);
+            var grid = new AjaxGridFactory().CreateAjaxGrid(sales, page ?? 1, page.HasValue);
+            var salesGrid = new GridViewModel<SaleViewModel>()
+            {
+                Grid = (AjaxGrid<SaleViewModel>)grid,
+                EnabledControlColumn = User.IsInRole("Admins"),
+                NameGrid = "salesGrid"
+            };
+            return Json(new { Html = grid.ToJson("_SaleGrid", salesGrid, this), grid.HasItems }, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult Chart()
@@ -49,11 +61,12 @@ namespace SystemSales.Presentation.Controllers
                              group sale by sale.Manager.Name into sGroup
                              select new { ManagerName = sGroup.Key, TotalSum = sGroup.Sum(x => x.Sum) };
 
+
             var chartModel = new ChartViewModel()
             {
                 XValues = saleGroups.Select(x => x.ManagerName).ToArray(),
                 YValues = saleGroups.Select(x => x.TotalSum).ToArray(),
-                Width = 600,
+                Width = 600*saleGroups.Count()/5,
                 Height = 400,
                 Title = "Sales",
                 NameSeries = "Total Sum"

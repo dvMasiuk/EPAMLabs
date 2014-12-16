@@ -45,8 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutoMapperProfiles\DtoToEntityMappingProfile.cs" />
-    <Compile Include="AutoMapperProfiles\EntityToDtoMappingProfile.cs" />
+    <Compile Include="AutoMapper\AutoMapperConfiguration.cs" />
+    <Compile Include="AutoMapper\DtoToEntityMappingProfile.cs" />
+    <Compile Include="AutoMapper\EntityToDtoMappingProfile.cs" />
     <Compile Include="Contracts\Services\ICustomerAppService.cs" />
     <Compile Include="Contracts\Services\IManagerAppService.cs" />
     <Compile Include="Contracts\Services\IProductAppService.cs" />

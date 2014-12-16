@@ -1,4 +1,4 @@
-﻿@model SystemSales.Presentation.Models.SalesDataViewModel
+﻿@model SystemSales.Presentation.Models.GridViewModel<SystemSales.Presentation.Models.SaleViewModel>
 
 @{
     ViewBag.Title = "Index";
@@ -11,13 +11,13 @@
 <h2>View Sales</h2>
 <hr />
 <p>
-    @if (User.IsInRole("Admins"))
+    @if (Model.EnabledControlColumn)
     {@Html.ActionLink("Create New", "Create")}
     @Html.ActionLink("Chart", "Chart", routeValues: null, htmlAttributes: new { @class = "nav navbar-nav navbar-right", target = "_blank" })
 </p>
 
 @{
-    Html.RenderPartial("_SaleGrid", Model.SaleGrid);
+    Html.RenderPartial("_SaleGrid", Model);
 }
 
 @section Scripts {

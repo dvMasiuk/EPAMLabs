@@ -2,7 +2,7 @@
 using SystemSales.Domain.Entities;
 using AutoMapper;
 
-namespace SystemSales.Application.AutoMapperProfiles
+namespace SystemSales.Application.AutoMapper
 {
     public class EntityToDtoMappingProfile : Profile
     {

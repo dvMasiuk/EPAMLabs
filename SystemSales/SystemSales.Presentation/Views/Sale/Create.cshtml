@@ -15,7 +15,7 @@
         @Html.ValidationSummary(true)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Manager, new {@class = "control-label col-md-2"})
+            @Html.LabelFor(model => model.Manager.Name, new {@class = "control-label col-md-2"})
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Manager.Name)
                 @Html.ValidationMessageFor(model => model.Manager.Name)
@@ -23,7 +23,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Customer, new {@class = "control-label col-md-2"})
+            @Html.LabelFor(model => model.Customer.Name, new {@class = "control-label col-md-2"})
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Customer.Name)
                 @Html.ValidationMessageFor(model => model.Customer.Name)
@@ -31,7 +31,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Product, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Product.Name, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Product.Name)
                 @Html.ValidationMessageFor(model => model.Product.Name)
